@@ -18,7 +18,9 @@
         ],
         "ban-types": false,
         "import-name": false,
-        "interface-name": false
+        "interface-name": false,
+        "max-line-length": false,
+        "object-shorthand-properties-first": false
     },
     "rulesDirectory": []
 }
