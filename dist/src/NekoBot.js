@@ -22,7 +22,7 @@ class NekoBot {
     /**
      * Threats Image
      * @param {String} url - Image URL to add to template.
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     threatsImage(url) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -44,7 +44,7 @@ class NekoBot {
     /**
      * Baguette Image
      * @param {String} url - Any image URL to generate, can be user avatar or anything.
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     baguetteImage(url) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -66,7 +66,7 @@ class NekoBot {
     /**
      * Clyde Image
      * @param {String} text - Text to clydify.
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     clydeImage(text) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -89,7 +89,7 @@ class NekoBot {
      * Ship Image
      * @param {String} user1 - User 1’s avatar
      * @param {String} user2 - User 2’s avatar
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     shipImage(user1, user2) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -113,7 +113,7 @@ class NekoBot {
      * Captcha Image
      * @param {String} url - User’s avatar URL or any image.
      * @param {String} username - User’s username or or any other string to show up.
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     captchaImage(url, username) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -137,7 +137,7 @@ class NekoBot {
      * WhoWouldWin Image
      * @param {String} user1 - User 1’s avatar
      * @param {String} user2 - User 2’s avatar
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     whowouldwinImage(user1, user2) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -160,7 +160,7 @@ class NekoBot {
     /**
      * ChangeMyMind Image
      * @param {String} text - Change my mind text.
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     changemymindImage(text) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -186,7 +186,7 @@ class NekoBot {
      * @param {String} body - Body of the character, there is only 1 or 2 for monika and 1, 1b, 2, 2b for the rest
      * @param {String} face - Face of the character to go with the body, is best to just see all the types at https://github.com/ReKTDevlol/NekoBot/blob/master/modules/fun.py#L14 (line14 to 34)
      * @param {String} text	- Text for the character to say, max length of 140
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     dllcImage(character, background, body, face, text) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -212,7 +212,7 @@ class NekoBot {
     /**
      * JPEG Image
      * @param {String} url - URL to JPEGify, would be recommended if the URL is as an JPEG or JPG format but PNG will still work :^)
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     jpegImage(url) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -234,7 +234,7 @@ class NekoBot {
     /**
      * Lolice Image
      * @param {String} url - Lolice chief
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     loliceImage(url) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -256,7 +256,7 @@ class NekoBot {
     /**
      * Kannagen Image
      * @param {String} text - text to kannafy
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     kannagenImage(text) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -278,7 +278,7 @@ class NekoBot {
     /**
      * IPhoneX Image
      * @param {String} url - Image to fill into an iphone.
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     iphonexImage(url) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -300,7 +300,7 @@ class NekoBot {
     /**
      * AnimeFace Image
      * @param {String} image - Image to find heccin weaboos
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     animefaceImage(image) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -322,7 +322,7 @@ class NekoBot {
     /**
      * Awooify Image
      * @param {String} url - Users avatar to AwOOOOify :3
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     awooifyImage(url) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -344,7 +344,7 @@ class NekoBot {
     /**
      * TrumpTweet Image
      * @param {String} text - Text to TrumpTweet
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     trumptweetImage(text) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -367,7 +367,7 @@ class NekoBot {
      * Tweet Image
      * @param {String} username - Twitter Username without the @
      * @param {String} text - Text to Tweet
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     tweetImage(username, text) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -390,7 +390,7 @@ class NekoBot {
     /**
      * DeepFry Image
      * @param {String} image - Image URL to DeepFry.
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     deepfryImage(image) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -412,7 +412,7 @@ class NekoBot {
     /**
      * Blurpify Image
      * @param {String} image - Image URL to Blurpify.
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     blurpifyImage(image) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -436,7 +436,7 @@ class NekoBot {
      * @param {String} image - Users Image
      * @param {String} text - Text to comment.
      * @param {String} username - User's Username.
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     phcommentImage(image, text, username) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -461,7 +461,7 @@ class NekoBot {
      * Magik Image
      * @param {String} image - Image to magikify
      * @param {Number} intensity - an integer of magik intensity from 0 to 10
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     magikImage(image, intensity) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -484,7 +484,7 @@ class NekoBot {
     /**
      * Fact Image
      * @param {String} text - No description provided..
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     factImage(text) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -506,7 +506,7 @@ class NekoBot {
     /**
      * Trash Image
      * @param {String} url - URL of trash waifu
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     trashImage(url) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -528,7 +528,7 @@ class NekoBot {
     /**
      * Random Image
      * @param {String} type - The type of image to get. Current types: hass, hmidriff, pgif, 4k, hentai, holo, hneko, neko, hkitsune, kemonomimi, anal, hanal, gonewild, kanna, ass, pussy, thigh, hthigh, gah, coffee, food
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     getRandomImage(type) {
         return __awaiter(this, void 0, void 0, function* () {
