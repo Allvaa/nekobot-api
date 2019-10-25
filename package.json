@@ -1,0 +1,32 @@
+{
+  "name": "nekobot-api",
+  "version": "0.0.1",
+  "description": "NekoBot API wrapper for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Allvaa/nekobot.git"
+  },
+  "keywords": [
+    "nekobot",
+    "api",
+    "wrapper",
+    "discord"
+  ],
+  "author": "Allvaa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Allvaa/nekobot/issues"
+  },
+  "homepage": "https://github.com/Allvaa/nekobot#readme",
+  "devDependencies": {
+    "tslint": "^5.20.0",
+    "tslint-config-airbnb": "^5.11.2",
+    "tslint-config-typings": "^0.3.1",
+    "typescript": "^3.6.4"
+  }
+}

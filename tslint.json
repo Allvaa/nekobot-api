@@ -1,0 +1,24 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended",
+        "tslint-config-airbnb",
+        "tslint-config-typings"
+    ],
+    "jsRules": {},
+    "rules": {
+        "eofline": false,
+        "quotemark": [
+            true,
+            "double"
+        ],
+        "ter-indent": [
+            true,
+            4
+        ],
+        "ban-types": false,
+        "import-name": false,
+        "interface-name": false
+    },
+    "rulesDirectory": []
+}
