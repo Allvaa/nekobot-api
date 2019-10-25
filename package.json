@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Allvaa/nekobot.git"
+    "url": "git+https://github.com/Allvaa/nekobot-api.git"
   },
   "keywords": [
     "nekobot",
@@ -20,9 +20,9 @@
   "author": "Allvaa",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Allvaa/nekobot/issues"
+    "url": "https://github.com/Allvaa/nekobot-api/issues"
   },
-  "homepage": "https://github.com/Allvaa/nekobot#readme",
+  "homepage": "https://github.com/Allvaa/nekobot-api#readme",
   "devDependencies": {
     "@types/superagent": "^4.1.3",
     "tslint": "^5.20.0",
