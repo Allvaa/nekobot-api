@@ -12,7 +12,7 @@ class NekoBot {
     /**
      * Threats Image
      * @param {String} url - Image URL to add to template.
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async threatsImage(url: String): Promise<String | void> {
         try {
@@ -32,7 +32,7 @@ class NekoBot {
     /**
      * Baguette Image
      * @param {String} url - Any image URL to generate, can be user avatar or anything.
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async baguetteImage(url: String): Promise<String | void> {
         try {
@@ -52,7 +52,7 @@ class NekoBot {
     /**
      * Clyde Image
      * @param {String} text - Text to clydify.
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async clydeImage(text: String): Promise<String | void> {
         try {
@@ -73,7 +73,7 @@ class NekoBot {
      * Ship Image
      * @param {String} user1 - User 1’s avatar
      * @param {String} user2 - User 2’s avatar
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async shipImage(user1: String, user2: String): Promise<String | void> {
         try {
@@ -95,7 +95,7 @@ class NekoBot {
      * Captcha Image
      * @param {String} url - User’s avatar URL or any image.
      * @param {String} username - User’s username or or any other string to show up.
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async captchaImage(url: String, username: String): Promise<String | void> {
         try {
@@ -117,7 +117,7 @@ class NekoBot {
      * WhoWouldWin Image
      * @param {String} user1 - User 1’s avatar
      * @param {String} user2 - User 2’s avatar
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async whowouldwinImage(user1: String, user2: String): Promise<String | void> {
         try {
@@ -138,7 +138,7 @@ class NekoBot {
     /**
      * ChangeMyMind Image
      * @param {String} text - Change my mind text.
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async changemymindImage(text: String): Promise<String | void> {
         try {
@@ -162,7 +162,7 @@ class NekoBot {
      * @param {String} body - Body of the character, there is only 1 or 2 for monika and 1, 1b, 2, 2b for the rest
      * @param {String} face - Face of the character to go with the body, is best to just see all the types at https://github.com/ReKTDevlol/NekoBot/blob/master/modules/fun.py#L14 (line14 to 34)
      * @param {String} text	- Text for the character to say, max length of 140
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async dllcImage(character: String, background: String, body: String, face: String, text: String): Promise<String | void> {
         try {
@@ -186,7 +186,7 @@ class NekoBot {
     /**
      * JPEG Image
      * @param {String} url - URL to JPEGify, would be recommended if the URL is as an JPEG or JPG format but PNG will still work :^)
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async jpegImage(url: String): Promise<String | void> {
         try {
@@ -206,7 +206,7 @@ class NekoBot {
     /**
      * Lolice Image
      * @param {String} url - Lolice chief
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async loliceImage(url: String): Promise<String | void> {
         try {
@@ -226,7 +226,7 @@ class NekoBot {
     /**
      * Kannagen Image
      * @param {String} text - text to kannafy
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async kannagenImage(text: String): Promise<String | void> {
         try {
@@ -246,7 +246,7 @@ class NekoBot {
     /**
      * IPhoneX Image
      * @param {String} url - Image to fill into an iphone.
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async iphonexImage(url: String): Promise<String | void> {
         try {
@@ -266,7 +266,7 @@ class NekoBot {
     /**
      * AnimeFace Image
      * @param {String} image - Image to find heccin weaboos
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async animefaceImage(image: String): Promise<String | void> {
         try {
@@ -286,7 +286,7 @@ class NekoBot {
     /**
      * Awooify Image
      * @param {String} url - Users avatar to AwOOOOify :3
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async awooifyImage(url: String): Promise<String | void> {
         try {
@@ -306,7 +306,7 @@ class NekoBot {
     /**
      * TrumpTweet Image
      * @param {String} text - Text to TrumpTweet
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async trumptweetImage(text: String): Promise<String | void> {
         try {
@@ -327,7 +327,7 @@ class NekoBot {
      * Tweet Image
      * @param {String} username - Twitter Username without the @
      * @param {String} text - Text to Tweet
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async tweetImage(username: String, text: String): Promise<String | void> {
         try {
@@ -348,7 +348,7 @@ class NekoBot {
     /**
      * DeepFry Image
      * @param {String} image - Image URL to DeepFry.
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async deepfryImage(image: String): Promise<String | void> {
         try {
@@ -368,7 +368,7 @@ class NekoBot {
     /**
      * Blurpify Image
      * @param {String} image - Image URL to Blurpify.
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async blurpifyImage(image: String): Promise<String | void> {
         try {
@@ -390,7 +390,7 @@ class NekoBot {
      * @param {String} image - Users Image
      * @param {String} text - Text to comment.
      * @param {String} username - User's Username.
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async phcommentImage(image: String, text: String, username: String): Promise<String | void> {
         try {
@@ -413,7 +413,7 @@ class NekoBot {
      * Magik Image
      * @param {String} image - Image to magikify
      * @param {Number} intensity - an integer of magik intensity from 0 to 10
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async magikImage(image: String, intensity: Number): Promise<String | void> {
         try {
@@ -434,7 +434,7 @@ class NekoBot {
     /**
      * Fact Image
      * @param {String} text - No description provided..
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async factImage(text: String): Promise<String | void> {
         try {
@@ -454,7 +454,7 @@ class NekoBot {
     /**
      * Trash Image
      * @param {String} url - URL of trash waifu
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async trashImage(url: String): Promise<String | void> {
         try {
@@ -474,7 +474,7 @@ class NekoBot {
     /**
      * Random Image
      * @param {String} type - The type of image to get. Current types: hass, hmidriff, pgif, 4k, hentai, holo, hneko, neko, hkitsune, kemonomimi, anal, hanal, gonewild, kanna, ass, pussy, thigh, hthigh, gah, coffee, food
-     * @returns {String} The image URL
+     * @returns {Promise<String | void>} The image URL
      */
     public async getRandomImage(type: String): Promise<String | void> {
         try {
