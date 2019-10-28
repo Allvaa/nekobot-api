@@ -180,15 +180,15 @@ class NekoBot {
         });
     }
     /**
-     * Dllc Image
+     * DDLC Image
      * @param {String} character - Can be either monika, yuri, natsuki, sayori or m, y, n, s
      * @param {String} background - Background of the image, types: bedroom, class, closet, club, corridor, house, kitchen, residential, sayori_bedroom
      * @param {String} body - Body of the character, there is only 1 or 2 for monika and 1, 1b, 2, 2b for the rest
      * @param {String} face - Face of the character to go with the body, is best to just see all the types at https://github.com/ReKTDevlol/NekoBot/blob/master/modules/fun.py#L14 (line14 to 34)
-     * @param {String} text	- Text for the character to say, max length of 140
+     * @param {String} text - Text for the character to say, max length of 140
      * @returns {Promise<String | void>} The image URL
      */
-    dllcImage(character, background, body, face, text) {
+    ddlcImage(character, background, body, face, text) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 const { body: b } = yield superagent_1.default.get(`${this.baseURL}imagegen`)
