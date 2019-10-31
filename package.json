@@ -3,9 +3,10 @@
   "version": "1.0.4",
   "description": "NekoBot API wrapper for Node.js",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "tsc"
+    "compile": "tsc -p ."
   },
   "repository": {
     "type": "git",

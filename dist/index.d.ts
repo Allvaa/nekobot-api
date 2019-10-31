@@ -1,2 +1,1 @@
-import NekoBot from "./src/NekoBot";
-export { NekoBot };
+export * from "./src/NekoBot";
