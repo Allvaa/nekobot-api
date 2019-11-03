@@ -2,8 +2,8 @@
   "name": "nekobot-api",
   "version": "1.0.6",
   "description": "NekoBot API wrapper for Node.js",
-  "main": "dist/src/index.js",
-  "types": "dist/src/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "tsc -p ."
