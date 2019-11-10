@@ -193,7 +193,7 @@ class NekoBot {
             try {
                 const { body: b } = yield superagent_1.default.get(`${this.baseURL}imagegen`)
                     .query({
-                    type: "dllc",
+                    type: "ddlc",
                     character,
                     background,
                     body,

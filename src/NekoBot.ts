@@ -168,7 +168,7 @@ class NekoBot {
         try {
             const { body: b } = await request.get(`${this.baseURL}imagegen`)
                 .query({
-                    type: "dllc",
+                    type: "ddlc",
                     character,
                     background,
                     body,
