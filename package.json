@@ -5,9 +5,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "tslint -p . && npm compile",
+    "test": "tslint -p . && npm run compile",
     "compile": "tsc -p .",
-    "pretty": "prettier --write 'src/**/*.ts'"
+    "pretty": "prettier --write \"src/*\""
   },
   "repository": {
     "type": "git",
@@ -45,13 +45,15 @@
     }
   },
   "lint-staged": {
-    "*.{ts,css,json,md}": [
+    "src/*": [
       "prettier --write",
       "git add"
-    ],
-    "*.ts": [
-      "eslint --fix",
-      "git add"
     ]
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": false
   }
 }

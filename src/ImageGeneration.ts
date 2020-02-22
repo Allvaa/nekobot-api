@@ -1,17 +1,17 @@
-import { NekoBot } from "./NekoBot";
+import { NekoBot } from "./NekoBot"
 
 /**
  * @class ImageGeneration
  */
 class ImageGeneration {
-    public client: NekoBot;
+    public client: NekoBot
 
     /**
      * Creates an instance of ImageGeneration.
      * @param {NekoBot} client
      */
     constructor(client: NekoBot) {
-        this.client = client;
+        this.client = client
     }
 
     /**
@@ -21,15 +21,16 @@ class ImageGeneration {
      */
     public async threats(url: String): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "threats",
-                    url
-                });
-            return body.message;
+                    url,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -41,15 +42,16 @@ class ImageGeneration {
      */
     public async baguette(url: String): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "baguette",
-                    url
-                });
-            return body.message;
+                    url,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -61,15 +63,16 @@ class ImageGeneration {
      */
     public async clyde(text: String): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "clyde",
-                    text
-                });
-            return body.message;
+                    text,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -82,16 +85,17 @@ class ImageGeneration {
      */
     public async ship(user1: String, user2: String): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "ship",
                     user1,
-                    user2
-                });
-            return body.message;
+                    user2,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -102,18 +106,22 @@ class ImageGeneration {
      * @param {String} username - User’s username or or any other string to show up.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async captcha(url: String, username: String): Promise<String | void> {
+    public async captcha(
+        url: String,
+        username: String
+    ): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "captcha",
                     url,
-                    username
-                });
-            return body.message;
+                    username,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -124,18 +132,22 @@ class ImageGeneration {
      * @param {String} user2 - User 2’s avatar
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async whoWouldWin(user1: String, user2: String): Promise<String | void> {
+    public async whoWouldWin(
+        user1: String,
+        user2: String
+    ): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "whowouldwin",
                     user1,
-                    user2
-                });
-            return body.message;
+                    user2,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -147,15 +159,16 @@ class ImageGeneration {
      */
     public async changemMyMind(text: String): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "changemymind",
-                    text
-                });
-            return body.message;
+                    text,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -169,21 +182,28 @@ class ImageGeneration {
      * @param {String} text - Text for the character to say, max length of 140
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async ddlc(character: String, background: String, body: String, face: String, text: String): Promise<String | void> {
+    public async ddlc(
+        character: String,
+        background: String,
+        body: String,
+        face: String,
+        text: String
+    ): Promise<String | void> {
         try {
-            const { body: b } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body: b } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "ddlc",
                     character,
                     background,
                     body,
                     face,
-                    text
-                });
-            return b.message;
+                    text,
+                })
+            return b.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -195,15 +215,16 @@ class ImageGeneration {
      */
     public async jpeg(url: String): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "jpeg",
-                    url
-                });
-            return body.message;
+                    url,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -215,15 +236,16 @@ class ImageGeneration {
      */
     public async lolice(url: String): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "lolice",
-                    url
-                });
-            return body.message;
+                    url,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -235,15 +257,16 @@ class ImageGeneration {
      */
     public async kannagen(text: String): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "kannagen",
-                    text
-                });
-            return body.message;
+                    text,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -255,15 +278,16 @@ class ImageGeneration {
      */
     public async iphoneX(url: String): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "iphonex",
-                    url
-                });
-            return body.message;
+                    url,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -275,15 +299,16 @@ class ImageGeneration {
      */
     public async animeFace(image: String): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "animeface",
-                    image
-                });
-            return body.message;
+                    image,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -295,15 +320,16 @@ class ImageGeneration {
      */
     public async awooify(url: String): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "awooify",
-                    url
-                });
-            return body.message;
+                    url,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -315,15 +341,16 @@ class ImageGeneration {
      */
     public async trumpTweet(text: String): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "trumptweet",
-                    text
-                });
-            return body.message;
+                    text,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -336,16 +363,17 @@ class ImageGeneration {
      */
     public async tweet(username: String, text: String): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "tweet",
                     username,
-                    text
-                });
-            return body.message;
+                    text,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -357,15 +385,16 @@ class ImageGeneration {
      */
     public async deepFry(image: String): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "deepfry",
-                    image
-                });
-            return body.message;
+                    image,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -377,15 +406,16 @@ class ImageGeneration {
      */
     public async blurpify(image: String): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "blurpify",
-                    image
-                });
-            return body.message;
+                    image,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -397,19 +427,24 @@ class ImageGeneration {
      * @param {String} username - User's Username.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async phComment(image: String, text: String, username: String): Promise<String | void> {
+    public async phComment(
+        image: String,
+        text: String,
+        username: String
+    ): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "phcomment",
                     image,
                     text,
-                    username
-                });
-            return body.message;
+                    username,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -420,18 +455,22 @@ class ImageGeneration {
      * @param {Number} [intensity] - an integer of magik intensity from 0 to 10
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async magik(image: String, intensity?: Number): Promise<String | void> {
+    public async magik(
+        image: String,
+        intensity?: Number
+    ): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "magik",
                     image,
-                    intensity
-                });
-            return body.message;
+                    intensity,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -443,15 +482,16 @@ class ImageGeneration {
      */
     public async fact(text: String): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "fact",
-                    text
-                });
-            return body.message;
+                    text,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
@@ -463,18 +503,19 @@ class ImageGeneration {
      */
     public async trash(url: String): Promise<String | void> {
         try {
-            const { body } = await this.client.request.get(`${this.client.baseURL}imagegen`)
+            const { body } = await this.client.request
+                .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "trash",
-                    url
-                });
-            return body.message;
+                    url,
+                })
+            return body.message
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
+                throw Error("Make sure the parameter(s) is correct!")
             }
         }
     }
 }
 
-export default ImageGeneration;
+export default ImageGeneration
