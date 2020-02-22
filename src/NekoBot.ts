@@ -1,6 +1,7 @@
 import request from "superagent";
 import { version } from "../package.json";
 import ImageGeneration from "./ImageGeneration";
+import { RandomImage, RandomImageType } from "./RandomImage";
 
 /**
  * @class NekoBot
@@ -19,8 +20,17 @@ class NekoBot {
      * @readonly
      * @returns {ImageGeneration} ImageGeneration class
      */
-    public get imageGen() {
+    public get imageGen(): ImageGeneration {
         return new ImageGeneration(this);
     }
+
+    /**
+     * @readonly
+     * @returns {RandomImage} RandomImage class
+     */
+    public get randomImage(): RandomImage {
+        return new RandomImage(this);
+    }
 }
-export default NekoBot;
+
+export { NekoBot, RandomImageType };

@@ -1,3 +1,3 @@
-import NekoBot from "./src/NekoBot";
+import { NekoBot, RandomImageType } from "./src/NekoBot";
 
-export { NekoBot };
+export { NekoBot, RandomImageType };
