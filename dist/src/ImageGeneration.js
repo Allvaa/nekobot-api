@@ -28,10 +28,11 @@ class ImageGeneration {
     threats(url) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "threats",
-                    url
+                    url,
                 });
                 return body.message;
             }
@@ -50,10 +51,11 @@ class ImageGeneration {
     baguette(url) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "baguette",
-                    url
+                    url,
                 });
                 return body.message;
             }
@@ -72,10 +74,11 @@ class ImageGeneration {
     clyde(text) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "clyde",
-                    text
+                    text,
                 });
                 return body.message;
             }
@@ -95,11 +98,12 @@ class ImageGeneration {
     ship(user1, user2) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "ship",
                     user1,
-                    user2
+                    user2,
                 });
                 return body.message;
             }
@@ -119,11 +123,12 @@ class ImageGeneration {
     captcha(url, username) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "captcha",
                     url,
-                    username
+                    username,
                 });
                 return body.message;
             }
@@ -143,11 +148,12 @@ class ImageGeneration {
     whoWouldWin(user1, user2) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "whowouldwin",
                     user1,
-                    user2
+                    user2,
                 });
                 return body.message;
             }
@@ -166,10 +172,11 @@ class ImageGeneration {
     changemMyMind(text) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "changemymind",
-                    text
+                    text,
                 });
                 return body.message;
             }
@@ -192,14 +199,15 @@ class ImageGeneration {
     ddlc(character, background, body, face, text) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body: b } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body: b } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "ddlc",
                     character,
                     background,
                     body,
                     face,
-                    text
+                    text,
                 });
                 return b.message;
             }
@@ -218,10 +226,11 @@ class ImageGeneration {
     jpeg(url) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "jpeg",
-                    url
+                    url,
                 });
                 return body.message;
             }
@@ -240,10 +249,11 @@ class ImageGeneration {
     lolice(url) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "lolice",
-                    url
+                    url,
                 });
                 return body.message;
             }
@@ -262,10 +272,11 @@ class ImageGeneration {
     kannagen(text) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "kannagen",
-                    text
+                    text,
                 });
                 return body.message;
             }
@@ -284,10 +295,11 @@ class ImageGeneration {
     iphoneX(url) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "iphonex",
-                    url
+                    url,
                 });
                 return body.message;
             }
@@ -306,10 +318,11 @@ class ImageGeneration {
     animeFace(image) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "animeface",
-                    image
+                    image,
                 });
                 return body.message;
             }
@@ -328,10 +341,11 @@ class ImageGeneration {
     awooify(url) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "awooify",
-                    url
+                    url,
                 });
                 return body.message;
             }
@@ -350,10 +364,11 @@ class ImageGeneration {
     trumpTweet(text) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "trumptweet",
-                    text
+                    text,
                 });
                 return body.message;
             }
@@ -373,11 +388,12 @@ class ImageGeneration {
     tweet(username, text) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "tweet",
                     username,
-                    text
+                    text,
                 });
                 return body.message;
             }
@@ -396,10 +412,11 @@ class ImageGeneration {
     deepFry(image) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "deepfry",
-                    image
+                    image,
                 });
                 return body.message;
             }
@@ -418,10 +435,11 @@ class ImageGeneration {
     blurpify(image) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "blurpify",
-                    image
+                    image,
                 });
                 return body.message;
             }
@@ -442,12 +460,13 @@ class ImageGeneration {
     phComment(image, text, username) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "phcomment",
                     image,
                     text,
-                    username
+                    username,
                 });
                 return body.message;
             }
@@ -467,11 +486,12 @@ class ImageGeneration {
     magik(image, intensity) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "magik",
                     image,
-                    intensity
+                    intensity,
                 });
                 return body.message;
             }
@@ -490,10 +510,11 @@ class ImageGeneration {
     fact(text) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "fact",
-                    text
+                    text,
                 });
                 return body.message;
             }
@@ -512,10 +533,11 @@ class ImageGeneration {
     trash(url) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}imagegen`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}imagegen`)
                     .query({
                     type: "trash",
-                    url
+                    url,
                 });
                 return body.message;
             }

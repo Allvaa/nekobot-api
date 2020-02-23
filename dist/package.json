@@ -7,7 +7,7 @@
     "scripts": {
         "test": "tslint -p . && npm run compile",
         "compile": "tsc -p .",
-        "pretty": "prettier --write 'src/*'"
+        "pretty": "prettier --write \"src/*\""
     },
     "repository": {
         "type": "git",

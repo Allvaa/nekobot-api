@@ -27,9 +27,10 @@ class RandomImage {
     getImage(type) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request.get(`${this.client.baseURL}image`)
+                const { body } = yield this.client.request
+                    .get(`${this.client.baseURL}image`)
                     .query({
-                    type
+                    type,
                 });
                 return body.message;
             }
