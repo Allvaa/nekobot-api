@@ -13,8 +13,20 @@ const RandomImage_1 = require("./RandomImage");
  */
 class NekoBot {
     constructor() {
+        /**
+         * Lib version
+         * @type {String}
+         */
         this.version = package_json_1.version;
+        /**
+         * API URL
+         * @type {String}
+         */
         this.baseURL = "https://nekobot.xyz/api/";
+        /**
+         * Http client
+         * @type {request.SuperAgentStatic}
+         */
         this.request = superagent_1.default;
     }
     /**

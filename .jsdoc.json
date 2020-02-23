@@ -12,12 +12,9 @@
         "plugins/markdown"
     ],
     "templates": {
-        "referenceTitle": "My SDK Name",
+        "referenceTitle": "nekobot-api",
         "disableSort": false,
-        "collapse": true,
-        "resources": {
-            "google": "https://www.google.com/"
-        }
+        "collapse": true
     },
     "opts": {
         "destination": "./docs/",

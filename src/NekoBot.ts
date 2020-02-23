@@ -12,8 +12,20 @@ class NekoBot {
     public baseURL: String;
     public request: request.SuperAgentStatic;
     constructor() {
+        /**
+         * Lib version
+         * @type {String}
+         */
         this.version = version;
+        /**
+         * API URL
+         * @type {String}
+         */
         this.baseURL = "https://nekobot.xyz/api/";
+        /**
+         * Http client
+         * @type {request.SuperAgentStatic}
+         */
         this.request = request;
     }
 
