@@ -13,14 +13,12 @@ yarn add nekobot-api
 ## Example Usage
 ```js
 const { NekoBot } = require("nekobot-api");
-const nekobotapi = new NekoBot();
+const api = new NekoBot();
 
 async function run() {
-    let image = await nekobotapi.magikImage("https://urimageurl.com");
+    let image = await api.imageGen.magik("image url"); // returns a string.
     console.log(image);
 }
 run();
 ```
-
-## Docs
-The parameters on the methods are same as in the [NekoBot API documentation.](https://docs.nekobot.xyz/)
+[Documentation](https://nekobot-api.allvzx.website)

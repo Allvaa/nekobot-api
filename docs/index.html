@@ -104,16 +104,15 @@ yarn add nekobot-api
 </code></pre>
 <h2>Example Usage</h2>
 <pre class="prettyprint source lang-js"><code>const { NekoBot } = require(&quot;nekobot-api&quot;);
-const nekobotapi = new NekoBot();
+const api = new NekoBot();
 
 async function run() {
-    let image = await nekobotapi.magikImage(&quot;https://urimageurl.com&quot;);
+    let image = await api.imageGen.magik(&quot;image url&quot;); // returns a string.
     console.log(image);
 }
 run();
 </code></pre>
-<h2>Docs</h2>
-<p>The parameters on the methods are same as in the <a href="https://docs.nekobot.xyz/">NekoBot API documentation.</a></p>
+<p><a href="https://nekobot-api.allvzx.website">Documentation</a></p>
     </article>
   </section>
 
