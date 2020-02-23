@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "tslint -p . && npm run compile",
-    "compile": "tsc -p .",
+    "compile": "tsc -p . && git add",
     "pretty": "prettier --write \"src/*\""
   },
   "repository": {
