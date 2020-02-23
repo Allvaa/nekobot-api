@@ -1,4 +1,4 @@
-import { NekoBot } from "./NekoBot"
+import { NekoBot } from "./NekoBot";
 type RandomImageType =
     | "hass"
     | "hmidriff"
@@ -20,20 +20,20 @@ type RandomImageType =
     | "hthigh"
     | "gah"
     | "coffee"
-    | "food"
+    | "food";
 
 /**
  * @class RandomImage
  */
 class RandomImage {
-    public client: NekoBot
+    public client: NekoBot;
 
     /**
      * Creates an instance of RandomImage.
      * @param {NekoBot} client
      */
     constructor(client: NekoBot) {
-        this.client = client
+        this.client = client;
     }
 
     /**
@@ -46,14 +46,14 @@ class RandomImage {
                 .get(`${this.client.baseURL}image`)
                 .query({
                     type,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
 }
 
-export { RandomImage, RandomImageType }
+export { RandomImage, RandomImageType };

@@ -1,19 +1,19 @@
-import request from "superagent"
-import { version } from "../package.json"
-import ImageGeneration from "./ImageGeneration"
-import { RandomImage, RandomImageType } from "./RandomImage"
+import request from "superagent";
+import { version } from "../package.json";
+import ImageGeneration from "./ImageGeneration";
+import { RandomImage, RandomImageType } from "./RandomImage";
 
 /**
  * @class NekoBot
  */
 class NekoBot {
-    public version: String
-    public baseURL: String
-    public request: request.SuperAgentStatic
+    public version: String;
+    public baseURL: String;
+    public request: request.SuperAgentStatic;
     constructor() {
-        this.version = version
-        this.baseURL = "https://nekobot.xyz/api/"
-        this.request = request
+        this.version = version;
+        this.baseURL = "https://nekobot.xyz/api/";
+        this.request = request;
     }
 
     /**
@@ -21,7 +21,7 @@ class NekoBot {
      * @returns {ImageGeneration} ImageGeneration class
      */
     public get imageGen(): ImageGeneration {
-        return new ImageGeneration(this)
+        return new ImageGeneration(this);
     }
 
     /**
@@ -29,8 +29,8 @@ class NekoBot {
      * @returns {RandomImage} RandomImage class
      */
     public get randomImage(): RandomImage {
-        return new RandomImage(this)
+        return new RandomImage(this);
     }
 }
 
-export { NekoBot, RandomImageType }
+export { NekoBot, RandomImageType };

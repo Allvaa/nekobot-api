@@ -1,17 +1,17 @@
-import { NekoBot } from "./NekoBot"
+import { NekoBot } from "./NekoBot";
 
 /**
  * @class ImageGeneration
  */
 class ImageGeneration {
-    public client: NekoBot
+    public client: NekoBot;
 
     /**
      * Creates an instance of ImageGeneration.
      * @param {NekoBot} client
      */
     constructor(client: NekoBot) {
-        this.client = client
+        this.client = client;
     }
 
     /**
@@ -26,11 +26,11 @@ class ImageGeneration {
                 .query({
                     type: "threats",
                     url,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -47,11 +47,11 @@ class ImageGeneration {
                 .query({
                     type: "baguette",
                     url,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -68,11 +68,11 @@ class ImageGeneration {
                 .query({
                     type: "clyde",
                     text,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -91,11 +91,11 @@ class ImageGeneration {
                     type: "ship",
                     user1,
                     user2,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -117,11 +117,11 @@ class ImageGeneration {
                     type: "captcha",
                     url,
                     username,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -143,11 +143,11 @@ class ImageGeneration {
                     type: "whowouldwin",
                     user1,
                     user2,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -164,11 +164,11 @@ class ImageGeneration {
                 .query({
                     type: "changemymind",
                     text,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -199,11 +199,11 @@ class ImageGeneration {
                     body,
                     face,
                     text,
-                })
-            return b.message
+                });
+            return b.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -220,11 +220,11 @@ class ImageGeneration {
                 .query({
                     type: "jpeg",
                     url,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -241,11 +241,11 @@ class ImageGeneration {
                 .query({
                     type: "lolice",
                     url,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -262,11 +262,11 @@ class ImageGeneration {
                 .query({
                     type: "kannagen",
                     text,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -283,11 +283,11 @@ class ImageGeneration {
                 .query({
                     type: "iphonex",
                     url,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -304,11 +304,11 @@ class ImageGeneration {
                 .query({
                     type: "animeface",
                     image,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -325,11 +325,11 @@ class ImageGeneration {
                 .query({
                     type: "awooify",
                     url,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -346,11 +346,11 @@ class ImageGeneration {
                 .query({
                     type: "trumptweet",
                     text,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -369,11 +369,11 @@ class ImageGeneration {
                     type: "tweet",
                     username,
                     text,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -390,11 +390,11 @@ class ImageGeneration {
                 .query({
                     type: "deepfry",
                     image,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -411,11 +411,11 @@ class ImageGeneration {
                 .query({
                     type: "blurpify",
                     image,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -440,11 +440,11 @@ class ImageGeneration {
                     image,
                     text,
                     username,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -466,11 +466,11 @@ class ImageGeneration {
                     type: "magik",
                     image,
                     intensity,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -487,11 +487,11 @@ class ImageGeneration {
                 .query({
                     type: "fact",
                     text,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
@@ -508,14 +508,14 @@ class ImageGeneration {
                 .query({
                     type: "trash",
                     url,
-                })
-            return body.message
+                });
+            return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!")
+                throw Error("Make sure the parameter(s) is correct!");
             }
         }
     }
 }
 
-export default ImageGeneration
+export default ImageGeneration;
