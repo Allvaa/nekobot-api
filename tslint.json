@@ -12,7 +12,6 @@
     "quotemark": [true, "double"],
     "ter-indent": [true, 4],
     "ban-types": false,
-    "semicolon": true,
     "import-name": false,
     "interface-name": false,
     "max-line-length": false,
