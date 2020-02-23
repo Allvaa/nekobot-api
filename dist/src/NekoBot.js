@@ -8,6 +8,7 @@ const package_json_1 = require("../package.json");
 const ImageGeneration_1 = __importDefault(require("./ImageGeneration"));
 const RandomImage_1 = require("./RandomImage");
 /**
+ * Creates an instance of NekoBot.
  * @class NekoBot
  */
 class NekoBot {

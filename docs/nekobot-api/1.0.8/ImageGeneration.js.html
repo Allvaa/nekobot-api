@@ -1,5 +1,106 @@
-"use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+      ImageGeneration.js - Documentation
+  </title>
+
+  <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  
+  <link type="text/css" rel="stylesheet" href="styles/collapse.css">
+  
+
+  
+
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+  0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+  mixpanel.init("1919205b2da72e4da3b9b6639b444d59");</script>
+  <!-- end Mixpanel -->
+</head>
+
+<body>
+  <svg style="display: none;">
+    <defs>
+      <symbol id="linkIcon" fill="#706d77" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger" class="navicon-button x">
+    <div class="navicon"></div>
+  </label>
+
+  <label for="nav-trigger" class="overlay"></label>
+
+  <div class="top-nav-wrapper">
+    <ul>
+      <li >
+        <a href="index.html">
+          
+            <svg fill="#6D6D6D" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          
+          
+        </a>
+      </li>
+
+      
+
+    </ul>
+  </div>
+
+  <nav>
+    <h3 class="reference-title">
+      My SDK Name
+    </h3>
+
+    
+      <h3>
+        Resources
+      </h3>
+      
+        <a href="https://www.google.com/">google</a>
+      
+    
+
+    <h3>Classes</h3><ul><li id="ImageGeneration-nav"><a href="ImageGeneration.html">ImageGeneration</a><ul class='methods'><li data-type="method" id="ImageGeneration-animeFace-nav"><a href="ImageGeneration.html#animeFace">animeFace</a></li><li data-type="method" id="ImageGeneration-awooify-nav"><a href="ImageGeneration.html#awooify">awooify</a></li><li data-type="method" id="ImageGeneration-baguette-nav"><a href="ImageGeneration.html#baguette">baguette</a></li><li data-type="method" id="ImageGeneration-blurpify-nav"><a href="ImageGeneration.html#blurpify">blurpify</a></li><li data-type="method" id="ImageGeneration-captcha-nav"><a href="ImageGeneration.html#captcha">captcha</a></li><li data-type="method" id="ImageGeneration-changemMyMind-nav"><a href="ImageGeneration.html#changemMyMind">changemMyMind</a></li><li data-type="method" id="ImageGeneration-clyde-nav"><a href="ImageGeneration.html#clyde">clyde</a></li><li data-type="method" id="ImageGeneration-ddlc-nav"><a href="ImageGeneration.html#ddlc">ddlc</a></li><li data-type="method" id="ImageGeneration-deepFry-nav"><a href="ImageGeneration.html#deepFry">deepFry</a></li><li data-type="method" id="ImageGeneration-fact-nav"><a href="ImageGeneration.html#fact">fact</a></li><li data-type="method" id="ImageGeneration-iphoneX-nav"><a href="ImageGeneration.html#iphoneX">iphoneX</a></li><li data-type="method" id="ImageGeneration-jpeg-nav"><a href="ImageGeneration.html#jpeg">jpeg</a></li><li data-type="method" id="ImageGeneration-kannagen-nav"><a href="ImageGeneration.html#kannagen">kannagen</a></li><li data-type="method" id="ImageGeneration-lolice-nav"><a href="ImageGeneration.html#lolice">lolice</a></li><li data-type="method" id="ImageGeneration-magik-nav"><a href="ImageGeneration.html#magik">magik</a></li><li data-type="method" id="ImageGeneration-phComment-nav"><a href="ImageGeneration.html#phComment">phComment</a></li><li data-type="method" id="ImageGeneration-ship-nav"><a href="ImageGeneration.html#ship">ship</a></li><li data-type="method" id="ImageGeneration-threats-nav"><a href="ImageGeneration.html#threats">threats</a></li><li data-type="method" id="ImageGeneration-trash-nav"><a href="ImageGeneration.html#trash">trash</a></li><li data-type="method" id="ImageGeneration-trumpTweet-nav"><a href="ImageGeneration.html#trumpTweet">trumpTweet</a></li><li data-type="method" id="ImageGeneration-tweet-nav"><a href="ImageGeneration.html#tweet">tweet</a></li><li data-type="method" id="ImageGeneration-whoWouldWin-nav"><a href="ImageGeneration.html#whoWouldWin">whoWouldWin</a></li></ul></li><li id="NekoBot-nav"><a href="NekoBot.html">NekoBot</a></li><li id="RandomImage-nav"><a href="RandomImage.html">RandomImage</a><ul class='methods'><li data-type="method" id="RandomImage-getImage-nav"><a href="RandomImage.html#getImage">getImage</a></li></ul></li></ul>
+  </nav>
+
+  <div id="main">
+    
+      <h1 class="page-title">
+        ImageGeneration.js
+      </h1>
+    
+
+    
+      
+
+<section>
+  <article>
+    <pre class="prettyprint source linenums"><code>"use strict";
+var __awaiter = (this &amp;&amp; this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -10,18 +111,20 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
- * Creates an instance of ImageGeneration.
  * @class ImageGeneration
- * @param {NekoBot} client
  */
 class ImageGeneration {
+    /**
+     * Creates an instance of ImageGeneration.
+     * @param {NekoBot} client
+     */
     constructor(client) {
         this.client = client;
     }
     /**
      * Threats Image
      * @param {String} url - Image URL to add to template.
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     threats(url) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -44,7 +147,7 @@ class ImageGeneration {
     /**
      * Baguette Image
      * @param {String} url - Any image URL to generate, can be user avatar or anything.
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     baguette(url) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -67,7 +170,7 @@ class ImageGeneration {
     /**
      * Clyde Image
      * @param {String} text - Text to clydify.
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     clyde(text) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -91,7 +194,7 @@ class ImageGeneration {
      * Ship Image
      * @param {String} user1 - User 1’s avatar
      * @param {String} user2 - User 2’s avatar
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     ship(user1, user2) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -116,7 +219,7 @@ class ImageGeneration {
      * Captcha Image
      * @param {String} url - User’s avatar URL or any image.
      * @param {String} username - User’s username or or any other string to show up.
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     captcha(url, username) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -141,7 +244,7 @@ class ImageGeneration {
      * WhoWouldWin Image
      * @param {String} user1 - User 1’s avatar
      * @param {String} user2 - User 2’s avatar
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     whoWouldWin(user1, user2) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -165,7 +268,7 @@ class ImageGeneration {
     /**
      * ChangeMyMind Image
      * @param {String} text - Change my mind text.
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     changemMyMind(text) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -192,7 +295,7 @@ class ImageGeneration {
      * @param {String} body - Body of the character, there is only 1 or 2 for monika and 1, 1b, 2, 2b for the rest
      * @param {String} face - Face of the character to go with the body, is best to just see all the types at https://github.com/ReKTDevlol/NekoBot/blob/master/modules/fun.py#L14 (line14 to 34)
      * @param {String} text - Text for the character to say, max length of 140
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     ddlc(character, background, body, face, text) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -219,7 +322,7 @@ class ImageGeneration {
     /**
      * JPEG Image
      * @param {String} url - URL to JPEGify, would be recommended if the URL is as an JPEG or JPG format but PNG will still work :^)
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     jpeg(url) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -242,7 +345,7 @@ class ImageGeneration {
     /**
      * Lolice Image
      * @param {String} url - Lolice chief
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     lolice(url) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -265,7 +368,7 @@ class ImageGeneration {
     /**
      * Kannagen Image
      * @param {String} text - text to kannafy
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     kannagen(text) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -288,7 +391,7 @@ class ImageGeneration {
     /**
      * IPhoneX Image
      * @param {String} url - Image to fill into an iphone.
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     iphoneX(url) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -311,7 +414,7 @@ class ImageGeneration {
     /**
      * AnimeFace Image
      * @param {String} image - Image to find heccin weaboos
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     animeFace(image) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -334,7 +437,7 @@ class ImageGeneration {
     /**
      * Awooify Image
      * @param {String} url - Users avatar to AwOOOOify :3
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     awooify(url) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -357,7 +460,7 @@ class ImageGeneration {
     /**
      * TrumpTweet Image
      * @param {String} text - Text to TrumpTweet
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     trumpTweet(text) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -381,7 +484,7 @@ class ImageGeneration {
      * Tweet Image
      * @param {String} username - Twitter Username without the @
      * @param {String} text - Text to Tweet
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     tweet(username, text) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -405,7 +508,7 @@ class ImageGeneration {
     /**
      * DeepFry Image
      * @param {String} image - Image URL to DeepFry.
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     deepFry(image) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -428,7 +531,7 @@ class ImageGeneration {
     /**
      * Blurpify Image
      * @param {String} image - Image URL to Blurpify.
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     blurpify(image) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -453,7 +556,7 @@ class ImageGeneration {
      * @param {String} image - Users Image
      * @param {String} text - Text to comment.
      * @param {String} username - User's Username.
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     phComment(image, text, username) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -479,7 +582,7 @@ class ImageGeneration {
      * Magik Image
      * @param {String} image - Image to magikify
      * @param {Number} [intensity] - an integer of magik intensity from 0 to 10
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     magik(image, intensity) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -503,7 +606,7 @@ class ImageGeneration {
     /**
      * Fact Image
      * @param {String} text - No description provided..
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     fact(text) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -526,7 +629,7 @@ class ImageGeneration {
     /**
      * Trash Image
      * @param {String} url - URL of trash waifu
-     * @returns {(Promise<String | void>)} The image URL
+     * @returns {(Promise&lt;String | void>)} The image URL
      */
     trash(url) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -548,4 +651,25 @@ class ImageGeneration {
     }
 }
 exports.default = ImageGeneration;
-//# sourceMappingURL=ImageGeneration.js.map
+//# sourceMappingURL=ImageGeneration.js.map</code></pre>
+  </article>
+</section>
+
+    
+
+
+  </div>
+
+  <br class="clear">
+
+  <footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
+  </footer>
+
+  <script src="scripts/linenumber.js"></script>
+  <script src="scripts/pagelocation.js"></script>
+
+  
+
+</body>
+</html>

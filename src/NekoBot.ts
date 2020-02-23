@@ -4,6 +4,7 @@ import ImageGeneration from "./ImageGeneration";
 import { RandomImage, RandomImageType } from "./RandomImage";
 
 /**
+ * Creates an instance of NekoBot.
  * @class NekoBot
  */
 class NekoBot {

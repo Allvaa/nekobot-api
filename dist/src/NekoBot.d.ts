@@ -2,6 +2,7 @@ import request from "superagent";
 import ImageGeneration from "./ImageGeneration";
 import { RandomImage, RandomImageType } from "./RandomImage";
 /**
+ * Creates an instance of NekoBot.
  * @class NekoBot
  */
 declare class NekoBot {

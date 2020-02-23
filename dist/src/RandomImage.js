@@ -10,13 +10,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
+ * Creates an instance of RandomImage.
  * @class RandomImage
+ * @param {NekoBot} client
  */
 class RandomImage {
-    /**
-     * Creates an instance of RandomImage.
-     * @param {NekoBot} client
-     */
     constructor(client) {
         this.client = client;
     }

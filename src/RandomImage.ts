@@ -23,15 +23,12 @@ type RandomImageType =
     | "food";
 
 /**
+ * Creates an instance of RandomImage.
  * @class RandomImage
+ * @param {NekoBot} client
  */
 class RandomImage {
     public client: NekoBot;
-
-    /**
-     * Creates an instance of RandomImage.
-     * @param {NekoBot} client
-     */
     constructor(client: NekoBot) {
         this.client = client;
     }

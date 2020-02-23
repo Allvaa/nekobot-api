@@ -1,15 +1,12 @@
 import { NekoBot } from "./NekoBot";
 
 /**
+ * Creates an instance of ImageGeneration.
  * @class ImageGeneration
+ * @param {NekoBot} client
  */
 class ImageGeneration {
     public client: NekoBot;
-
-    /**
-     * Creates an instance of ImageGeneration.
-     * @param {NekoBot} client
-     */
     constructor(client: NekoBot) {
         this.client = client;
     }
