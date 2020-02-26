@@ -1,6 +1,6 @@
 {
   "name": "nekobot-api",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "NekoBot API wrapper for Node.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
