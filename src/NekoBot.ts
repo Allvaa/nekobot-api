@@ -1,7 +1,7 @@
 import request from "superagent";
 import { version } from "../package.json";
 import { ImageEndpoint, ImageEndpointType } from "./ImageEndpoint";
-import ImageGeneration from "./ImageGeneration";
+import { ImageGeneration } from "./ImageGeneration";
 
 /**
  * Creates an instance of NekoBot.
@@ -39,7 +39,7 @@ class NekoBot {
 
     /**
      * @readonly
-     * @returns {ImageEndpoint} RandomImage class
+     * @returns {ImageEndpoint} ImageEndpoint class
      */
     public get imageEndpoint(): ImageEndpoint {
         return new ImageEndpoint(this);

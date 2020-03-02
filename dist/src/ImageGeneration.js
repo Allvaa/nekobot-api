@@ -547,5 +547,5 @@ class ImageGeneration {
         });
     }
 }
-exports.default = ImageGeneration;
+exports.ImageGeneration = ImageGeneration;
 //# sourceMappingURL=ImageGeneration.js.map

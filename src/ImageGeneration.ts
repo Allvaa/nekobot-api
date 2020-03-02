@@ -515,4 +515,4 @@ class ImageGeneration {
     }
 }
 
-export default ImageGeneration;
+export { ImageGeneration };

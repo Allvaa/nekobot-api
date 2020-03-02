@@ -151,4 +151,4 @@ declare class ImageGeneration {
      */
     trash(url: String): Promise<String | void>;
 }
-export default ImageGeneration;
+export { ImageGeneration };
