@@ -1,6 +1,6 @@
 import request from "superagent";
+import { ImageEndpoint, ImageEndpointType } from "./ImageEndpoint";
 import ImageGeneration from "./ImageGeneration";
-import { RandomImage, RandomImageType } from "./RandomImage";
 /**
  * Creates an instance of NekoBot.
  * @class NekoBot
@@ -14,11 +14,11 @@ declare class NekoBot {
      * @readonly
      * @returns {ImageGeneration} ImageGeneration class
      */
-    readonly imageGen: ImageGeneration;
+    get imageGen(): ImageGeneration;
     /**
      * @readonly
-     * @returns {RandomImage} RandomImage class
+     * @returns {ImageEndpoint} RandomImage class
      */
-    readonly randomImage: RandomImage;
+    get imageEndpoint(): ImageEndpoint;
 }
-export { NekoBot, RandomImageType };
+export { NekoBot, ImageEndpointType };

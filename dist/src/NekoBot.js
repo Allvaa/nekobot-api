@@ -5,8 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const superagent_1 = __importDefault(require("superagent"));
 const package_json_1 = require("../package.json");
+const ImageEndpoint_1 = require("./ImageEndpoint");
 const ImageGeneration_1 = __importDefault(require("./ImageGeneration"));
-const RandomImage_1 = require("./RandomImage");
 /**
  * Creates an instance of NekoBot.
  * @class NekoBot
@@ -38,10 +38,10 @@ class NekoBot {
     }
     /**
      * @readonly
-     * @returns {RandomImage} RandomImage class
+     * @returns {ImageEndpoint} RandomImage class
      */
-    get randomImage() {
-        return new RandomImage_1.RandomImage(this);
+    get imageEndpoint() {
+        return new ImageEndpoint_1.ImageEndpoint(this);
     }
 }
 exports.NekoBot = NekoBot;

@@ -10,16 +10,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
- * Creates an instance of RandomImage.
- * @class RandomImage
+ * Creates an instance of ImageEndpoint.
+ * @class ImageEndpoint
  * @param {NekoBot} client
  */
-class RandomImage {
+class ImageEndpoint {
     constructor(client) {
         this.client = client;
     }
     /**
-     * @param {RandomImageType} type - The type of image to get. Current types: hass, hmidriff, pgif, 4k, hentai, holo, hneko, neko, hkitsune, kemonomimi, anal, hanal, gonewild, kanna, ass, pussy, thigh, hthigh, gah, coffee, food
+     * @param {ImageEndpointType} type - The type of image to get. Current types: hass, hmidriff, pgif, 4k, hentai, holo, hneko, neko, hkitsune, kemonomimi, anal, hanal, gonewild, kanna, ass, pussy, thigh, hthigh, gah, coffee, food
      * @returns {(Promise<String | void>)} Image URL
      */
     getImage(type) {
@@ -40,5 +40,5 @@ class RandomImage {
         });
     }
 }
-exports.RandomImage = RandomImage;
-//# sourceMappingURL=RandomImage.js.map
+exports.ImageEndpoint = ImageEndpoint;
+//# sourceMappingURL=ImageEndpoint.js.map
