@@ -22,4 +22,4 @@ async function run() {
 }
 run();
 ```
-[Documentation](https://nekobot-api.allvzx.website)
+[Documentation](https://nba.allvzx.website)
