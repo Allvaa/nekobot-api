@@ -1,7 +1,8 @@
-# nekobot-api
+# nekobot-api [![CircleCI](https://circleci.com/gh/Allvaa/nekobot-api.svg?style=svg)](https://circleci.com/gh/Allvaa/nekobot-api) [![Depedencies](https://img.shields.io/david/Allvaa/nekobot-api.svg)](https://david-dm.org/Allvaa/nekobot-api)
 NekoBot API wrapper for Node.js
 
 ## Installing
+[![Version](https://nodei.co/npm/nekobot-api.png?compact=true)](https://nodei.co/npm/nekobot-api)
 ```sh
 # npm
 npm i nekobot-api
