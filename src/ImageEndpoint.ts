@@ -1,5 +1,5 @@
 import { NekoBot } from "./NekoBot";
-type RandomImageType =
+type ImageEndpointType =
     | "hass"
     | "hmidriff"
     | "pgif"
@@ -23,21 +23,21 @@ type RandomImageType =
     | "food";
 
 /**
- * Creates an instance of RandomImage.
- * @class RandomImage
+ * Creates an instance of ImageEndpoint.
+ * @class ImageEndpoint
  * @param {NekoBot} client
  */
-class RandomImage {
+class ImageEndpoint {
     public client: NekoBot;
     constructor(client: NekoBot) {
         this.client = client;
     }
 
     /**
-     * @param {RandomImageType} type - The type of image to get. Current types: hass, hmidriff, pgif, 4k, hentai, holo, hneko, neko, hkitsune, kemonomimi, anal, hanal, gonewild, kanna, ass, pussy, thigh, hthigh, gah, coffee, food
+     * @param {ImageEndpointType} type - The type of image to get. Current types: hass, hmidriff, pgif, 4k, hentai, holo, hneko, neko, hkitsune, kemonomimi, anal, hanal, gonewild, kanna, ass, pussy, thigh, hthigh, gah, coffee, food
      * @returns {(Promise<String | void>)} Image URL
      */
-    public async getImage(type: RandomImageType): Promise<String | void> {
+    public async getImage(type: ImageEndpointType): Promise<String | void> {
         try {
             const { body } = await this.client.request
                 .get(`${this.client.baseURL}image`)
@@ -53,4 +53,4 @@ class RandomImage {
     }
 }
 
-export { RandomImage, RandomImageType };
+export { ImageEndpoint, ImageEndpointType };
