@@ -30,7 +30,7 @@
     "@types/superagent": "^4.1.7",
     "braintree-jsdoc-template": "^3.3.0",
     "jsdoc": "^3.6.3",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.4",
     "tslint": "^5.20.1",
     "tslint-config-airbnb": "^5.11.2",
     "tslint-config-prettier": "^1.18.0",
