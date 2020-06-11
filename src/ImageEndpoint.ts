@@ -1,5 +1,5 @@
 import { NekoBot } from "./NekoBot";
-import { ImageEndpointType } from "./@types/index";
+import { ImageEndpointType } from "./Types";
 
 /**
  * Creates an instance of ImageEndpoint.

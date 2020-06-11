@@ -11,4 +11,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./src/NekoBot"), exports);
+__exportStar(require("./src/ImageEndpoint"), exports);
+__exportStar(require("./src/ImageGeneration"), exports);
+__exportStar(require("./src/Types"), exports);
 //# sourceMappingURL=index.js.map
