@@ -15,5 +15,21 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-console": "off",
+        "no-unused-vars": "off",
+        "space-before-function-paren": "off",
+        "no-unused-expressions": "off"
     }
 }
