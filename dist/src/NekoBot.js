@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.NekoBot = void 0;
 const superagent_1 = __importDefault(require("superagent"));
 const package_json_1 = require("../package.json");
 const ImageEndpoint_1 = require("./ImageEndpoint");
