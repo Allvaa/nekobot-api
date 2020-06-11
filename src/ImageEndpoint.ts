@@ -43,7 +43,7 @@ class ImageEndpoint {
             const { body } = await this.client.request
                 .get(`${this.client.baseURL}image`)
                 .query({
-                    type,
+                    type
                 });
             return body.message;
         } catch (err) {
@@ -54,4 +54,4 @@ class ImageEndpoint {
     }
 }
 
-export { ImageEndpoint, ImageEndpointType };
+export { ImageEndpoint };
