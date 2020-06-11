@@ -1,27 +1,5 @@
 import { NekoBot } from "./NekoBot";
-type ImageEndpointType =
-    | "hass"
-    | "hmidriff"
-    | "pgif"
-    | "4k"
-    | "hentai"
-    | "holo"
-    | "hneko"
-    | "neko"
-    | "hkitsune"
-    | "kemonomimi"
-    | "anal"
-    | "hanal"
-    | "gonewild"
-    | "kanna"
-    | "ass"
-    | "pussy"
-    | "thigh"
-    | "hthigh"
-    | "gah"
-    | "coffee"
-    | "food"
-    | "cosplay";
+import { ImageEndpointType } from "./@types/index";
 
 /**
  * Creates an instance of ImageEndpoint.
@@ -35,7 +13,7 @@ class ImageEndpoint {
     }
 
     /**
-     * @param {ImageEndpointType} type - The type of image to get. Current types: hass, hmidriff, pgif, 4k, hentai, holo, hneko, neko, hkitsune, kemonomimi, anal, hanal, gonewild, kanna, ass, pussy, thigh, hthigh, gah, coffee, food
+     * @param {ImageEndpointType} type - The type of image to get. Current types: hass, hmidriff, pgif, 4k, hentai, holo, hneko, neko, hkitsune, kemonomimi, anal, hanal, gonewild, kanna, ass, pussy, thigh, hthigh, gah, coffee, food, cosplay.
      * @returns {(Promise<String | void>)} Image URL
      */
     public async getImage(type: ImageEndpointType): Promise<String | void> {
