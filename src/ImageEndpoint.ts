@@ -20,7 +20,8 @@ type ImageEndpointType =
     | "hthigh"
     | "gah"
     | "coffee"
-    | "food";
+    | "food"
+    | "cosplay";
 
 /**
  * Creates an instance of ImageEndpoint.
