@@ -1,5 +1,5 @@
 import request from "superagent";
-import { ImageEndpoint, ImageEndpointType } from "./ImageEndpoint";
+import { ImageEndpoint } from "./ImageEndpoint";
 import { ImageGeneration } from "./ImageGeneration";
 /**
  * Creates an instance of NekoBot.
@@ -21,4 +21,4 @@ declare class NekoBot {
      */
     get imageEndpoint(): ImageEndpoint;
 }
-export { NekoBot, ImageEndpointType };
+export { NekoBot };

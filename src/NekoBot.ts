@@ -1,6 +1,6 @@
 import request from "superagent";
 import { version } from "../package.json";
-import { ImageEndpoint, ImageEndpointType } from "./ImageEndpoint";
+import { ImageEndpoint } from "./ImageEndpoint";
 import { ImageGeneration } from "./ImageGeneration";
 
 /**
@@ -46,4 +46,4 @@ class NekoBot {
     }
 }
 
-export { NekoBot, ImageEndpointType };
+export { NekoBot };

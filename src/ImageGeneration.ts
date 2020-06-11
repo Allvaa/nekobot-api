@@ -22,7 +22,7 @@ class ImageGeneration {
                 .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "threats",
-                    url,
+                    url
                 });
             return body.message;
         } catch (err) {
@@ -43,7 +43,7 @@ class ImageGeneration {
                 .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "baguette",
-                    url,
+                    url
                 });
             return body.message;
         } catch (err) {
@@ -64,7 +64,7 @@ class ImageGeneration {
                 .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "clyde",
-                    text,
+                    text
                 });
             return body.message;
         } catch (err) {
@@ -87,7 +87,7 @@ class ImageGeneration {
                 .query({
                     type: "ship",
                     user1,
-                    user2,
+                    user2
                 });
             return body.message;
         } catch (err) {
@@ -113,7 +113,7 @@ class ImageGeneration {
                 .query({
                     type: "captcha",
                     url,
-                    username,
+                    username
                 });
             return body.message;
         } catch (err) {
@@ -139,7 +139,7 @@ class ImageGeneration {
                 .query({
                     type: "whowouldwin",
                     user1,
-                    user2,
+                    user2
                 });
             return body.message;
         } catch (err) {
@@ -160,7 +160,7 @@ class ImageGeneration {
                 .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "changemymind",
-                    text,
+                    text
                 });
             return body.message;
         } catch (err) {
@@ -195,7 +195,7 @@ class ImageGeneration {
                     background,
                     body,
                     face,
-                    text,
+                    text
                 });
             return b.message;
         } catch (err) {
@@ -216,7 +216,7 @@ class ImageGeneration {
                 .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "jpeg",
-                    url,
+                    url
                 });
             return body.message;
         } catch (err) {
@@ -237,7 +237,7 @@ class ImageGeneration {
                 .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "lolice",
-                    url,
+                    url
                 });
             return body.message;
         } catch (err) {
@@ -258,7 +258,7 @@ class ImageGeneration {
                 .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "kannagen",
-                    text,
+                    text
                 });
             return body.message;
         } catch (err) {
@@ -279,7 +279,7 @@ class ImageGeneration {
                 .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "iphonex",
-                    url,
+                    url
                 });
             return body.message;
         } catch (err) {
@@ -300,7 +300,7 @@ class ImageGeneration {
                 .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "animeface",
-                    image,
+                    image
                 });
             return body.message;
         } catch (err) {
@@ -321,7 +321,7 @@ class ImageGeneration {
                 .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "awooify",
-                    url,
+                    url
                 });
             return body.message;
         } catch (err) {
@@ -342,7 +342,7 @@ class ImageGeneration {
                 .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "trumptweet",
-                    text,
+                    text
                 });
             return body.message;
         } catch (err) {
@@ -365,7 +365,7 @@ class ImageGeneration {
                 .query({
                     type: "tweet",
                     username,
-                    text,
+                    text
                 });
             return body.message;
         } catch (err) {
@@ -386,7 +386,7 @@ class ImageGeneration {
                 .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "deepfry",
-                    image,
+                    image
                 });
             return body.message;
         } catch (err) {
@@ -407,7 +407,7 @@ class ImageGeneration {
                 .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "blurpify",
-                    image,
+                    image
                 });
             return body.message;
         } catch (err) {
@@ -436,7 +436,7 @@ class ImageGeneration {
                     type: "phcomment",
                     image,
                     text,
-                    username,
+                    username
                 });
             return body.message;
         } catch (err) {
@@ -462,7 +462,7 @@ class ImageGeneration {
                 .query({
                     type: "magik",
                     image,
-                    intensity,
+                    intensity
                 });
             return body.message;
         } catch (err) {
@@ -483,7 +483,7 @@ class ImageGeneration {
                 .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "fact",
-                    text,
+                    text
                 });
             return body.message;
         } catch (err) {
@@ -504,7 +504,7 @@ class ImageGeneration {
                 .get(`${this.client.baseURL}imagegen`)
                 .query({
                     type: "trash",
-                    url,
+                    url
                 });
             return body.message;
         } catch (err) {

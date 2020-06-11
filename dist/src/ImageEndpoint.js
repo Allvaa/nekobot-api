@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageEndpoint = void 0;
 /**
  * Creates an instance of ImageEndpoint.
  * @class ImageEndpoint
@@ -28,7 +29,7 @@ class ImageEndpoint {
                 const { body } = yield this.client.request
                     .get(`${this.client.baseURL}image`)
                     .query({
-                    type,
+                    type
                 });
                 return body.message;
             }
