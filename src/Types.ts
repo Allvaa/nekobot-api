@@ -20,4 +20,6 @@ export type ImageEndpointType =
     | "gah"
     | "coffee"
     | "food"
-    | "cosplay";
+    | "cosplay"
+    | "paizuri"
+    | "tentacle";
