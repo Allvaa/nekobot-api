@@ -1,2 +1,7 @@
+.circleci/
 docs/
 src/
+.eslintrc.json
+.jsdoc.json
+index.ts
+tsconfig.json
