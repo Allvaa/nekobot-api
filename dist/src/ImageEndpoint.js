@@ -10,6 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ImageEndpoint = void 0;
+const donatorTypes = ["cosplay", "swimsuit"];
 /**
  * Creates an instance of ImageEndpoint.
  * @class ImageEndpoint
@@ -31,7 +32,7 @@ class ImageEndpoint {
                     .query({
                     type
                 });
-                if (this.client.token)
+                if (this.client.token && donatorTypes.includes(type))
                     req.set("Authorization", this.client.token);
                 const { body } = yield req;
                 return body.message;

@@ -1,5 +1,6 @@
 import { NekoBot } from "./NekoBot";
 import { ImageEndpointType } from "./Types";
+const donatorTypes = ["cosplay", "swimsuit"];
 
 /**
  * Creates an instance of ImageEndpoint.
@@ -23,7 +24,7 @@ class ImageEndpoint {
                 .query({
                     type
                 });
-            if (this.client.token) req.set("Authorization", this.client.token as string);
+            if (this.client.token && donatorTypes.includes(type)) req.set("Authorization", this.client.token as string);
             const { body } = await req;
             return body.message;
         } catch (err) {
