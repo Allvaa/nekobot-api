@@ -18,17 +18,18 @@ class ImageEndpoint {
      */
     public async getImage(type: ImageEndpointType): Promise<String | void> {
         try {
-            const { body } = await this.client.request
+            const req = this.client.request
                 .get(`${this.client.baseURL}image`)
-                .set("Authorization", this.client.token!.toString())
                 .query({
                     type
                 });
+            if (this.client.token) req.set("Authorization", this.client.token as string);
+            const { body } = await req;
             return body.message;
         } catch (err) {
             if (err.message === "Bad Request") {
                 throw Error("Make sure the parameter(s) is correct!");
-            }
+            } else throw err;
         }
     }
 }

@@ -25,7 +25,7 @@ class NekoBot {
          */
         this.baseURL = "https://nekobot.xyz/api/";
         /**
-         * API Token (required for Image Endpoints)
+         * API Token (required for donator types in Image Endpoints)
          * @type {String}
          */
         this.token = token;

@@ -26,18 +26,22 @@ class ImageEndpoint {
     getImage(type) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request
+                const req = this.client.request
                     .get(`${this.client.baseURL}image`)
-                    .set("Authorization", this.client.token.toString())
                     .query({
                     type
                 });
+                if (this.client.token)
+                    req.set("Authorization", this.client.token);
+                const { body } = yield req;
                 return body.message;
             }
             catch (err) {
                 if (err.message === "Bad Request") {
                     throw Error("Make sure the parameter(s) is correct!");
                 }
+                else
+                    throw err;
             }
         });
     }
