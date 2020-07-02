@@ -3,16 +3,18 @@ import { version } from "../package.json";
 import { ImageEndpoint } from "./ImageEndpoint";
 import { ImageGeneration } from "./ImageGeneration";
 
-/**
- * Creates an instance of NekoBot.
- * @class NekoBot
- */
 class NekoBot {
     public version: String;
     public baseURL: String;
-    public token: String;
+    public token?: String;
     public request: request.SuperAgentStatic;
-    constructor(token: String | "") {
+
+    /**
+     * Creates an instance of NekoBot.
+     * @class NekoBot
+     * @param {String} [token]
+     */
+    constructor(token?: String) {
         /**
          * Lib version
          * @type {String}
@@ -24,7 +26,7 @@ class NekoBot {
          */
         this.baseURL = "https://nekobot.xyz/api/";
         /**
-         * API Token
+         * API Token (required for Image Endpoints)
          * @type {String}
          */
         this.token = token;

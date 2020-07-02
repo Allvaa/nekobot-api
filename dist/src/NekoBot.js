@@ -8,12 +8,13 @@ const superagent_1 = __importDefault(require("superagent"));
 const package_json_1 = require("../package.json");
 const ImageEndpoint_1 = require("./ImageEndpoint");
 const ImageGeneration_1 = require("./ImageGeneration");
-/**
- * Creates an instance of NekoBot.
- * @class NekoBot
- */
 class NekoBot {
-    constructor() {
+    /**
+     * Creates an instance of NekoBot.
+     * @class NekoBot
+     * @param {String} [token]
+     */
+    constructor(token) {
         /**
          * Lib version
          * @type {String}
@@ -24,6 +25,11 @@ class NekoBot {
          * @type {String}
          */
         this.baseURL = "https://nekobot.xyz/api/";
+        /**
+         * API Token (required for Image Endpoints)
+         * @type {String}
+         */
+        this.token = token;
         /**
          * Http client
          * @type {request.SuperAgentStatic}

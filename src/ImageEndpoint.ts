@@ -20,7 +20,7 @@ class ImageEndpoint {
         try {
             const { body } = await this.client.request
                 .get(`${this.client.baseURL}image`)
-                .set("Authorization", this.client.token.toString())
+                .set("Authorization", this.client.token!.toString())
                 .query({
                     type
                 });
