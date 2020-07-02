@@ -104,6 +104,7 @@ var __awaiter = (this &amp;&amp; this.__awaiter) || function (thisArg, _argument
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ImageEndpoint = void 0;
+const donatorTypes = ["cosplay", "swimsuit"];
 /**
  * Creates an instance of ImageEndpoint.
  * @class ImageEndpoint
@@ -114,23 +115,28 @@ class ImageEndpoint {
         this.client = client;
     }
     /**
-     * @param {ImageEndpointType} type - The type of image to get. Current types: hass, hmidriff, pgif, 4k, hentai, holo, hneko, neko, hkitsune, kemonomimi, anal, hanal, gonewild, kanna, ass, pussy, thigh, hthigh, gah, coffee, food, cosplay, paizuri, tentacle.
+     * @param {ImageEndpointType} type - The type of image to get. Current types: hass, hmidriff, pgif, 4k, hentai, holo, hneko, neko, hkitsune, kemonomimi, anal, hanal, gonewild, kanna, ass, pussy, thigh, hthigh, gah, coffee, food, paizuri, tentacle. Token required types: cosplay, swimsuit
      * @returns {(Promise&lt;String | void>)} Image URL
      */
     getImage(type) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { body } = yield this.client.request
+                const req = this.client.request
                     .get(`${this.client.baseURL}image`)
                     .query({
                     type
                 });
+                if (this.client.token &amp;&amp; donatorTypes.includes(type))
+                    req.set("Authorization", this.client.token);
+                const { body } = yield req;
                 return body.message;
             }
             catch (err) {
                 if (err.message === "Bad Request") {
                     throw Error("Make sure the parameter(s) is correct!");
                 }
+                else
+                    throw err;
             }
         });
     }
