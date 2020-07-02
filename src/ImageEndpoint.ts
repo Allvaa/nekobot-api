@@ -13,13 +13,14 @@ class ImageEndpoint {
     }
 
     /**
-     * @param {ImageEndpointType} type - The type of image to get. Current types: hass, hmidriff, pgif, 4k, hentai, holo, hneko, neko, hkitsune, kemonomimi, anal, hanal, gonewild, kanna, ass, pussy, thigh, hthigh, gah, coffee, food, cosplay, paizuri, tentacle.
+     * @param {ImageEndpointType} type - The type of image to get. Current types: hass, hmidriff, pgif, 4k, hentai, holo, hneko, neko, hkitsune, kemonomimi, anal, hanal, gonewild, kanna, ass, pussy, thigh, hthigh, gah, coffee, food, paizuri, tentacle. Token required types: cosplay, swimsuit
      * @returns {(Promise<String | void>)} Image URL
      */
     public async getImage(type: ImageEndpointType): Promise<String | void> {
         try {
             const { body } = await this.client.request
                 .get(`${this.client.baseURL}image`)
+                .set("Authorization", this.client.token.toString())
                 .query({
                     type
                 });

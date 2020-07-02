@@ -10,8 +10,9 @@ import { ImageGeneration } from "./ImageGeneration";
 class NekoBot {
     public version: String;
     public baseURL: String;
+    public token: String;
     public request: request.SuperAgentStatic;
-    constructor() {
+    constructor(token: String | "") {
         /**
          * Lib version
          * @type {String}
@@ -22,6 +23,11 @@ class NekoBot {
          * @type {String}
          */
         this.baseURL = "https://nekobot.xyz/api/";
+        /**
+         * API Token
+         * @type {String}
+         */
+        this.token = token;
         /**
          * Http client
          * @type {request.SuperAgentStatic}

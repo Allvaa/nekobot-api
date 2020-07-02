@@ -22,4 +22,5 @@ export type ImageEndpointType =
     | "food"
     | "cosplay"
     | "paizuri"
-    | "tentacle";
+    | "tentacle"
+    | "swimsuit";
