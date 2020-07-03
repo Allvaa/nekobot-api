@@ -1,6 +1,5 @@
 import { NekoBot } from "./NekoBot";
 import { ImageEndpointType } from "./Types";
-const donatorTypes = ["cosplay", "swimsuit"];
 
 /**
  * Creates an instance of ImageEndpoint.
