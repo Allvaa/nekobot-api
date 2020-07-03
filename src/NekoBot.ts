@@ -1,7 +1,8 @@
-import request from "superagent";
+import superagent from "superagent";
 import { version } from "../package.json";
 import { ImageEndpoint } from "./ImageEndpoint";
 import { ImageGeneration } from "./ImageGeneration";
+const donatorTypes = ["cosplay", "swimsuit"];
 
 /**
  * Creates an instance of NekoBot.
@@ -12,7 +13,6 @@ class NekoBot {
     public version: String;
     public baseURL: String;
     public token?: String;
-    public request: request.SuperAgentStatic;
     constructor(token?: String) {
         /**
          * Lib version
@@ -29,11 +29,6 @@ class NekoBot {
          * @type {String}
          */
         this.token = token;
-        /**
-         * Http client
-         * @type {request.SuperAgentStatic}
-         */
-        this.request = request;
     }
 
     /**
@@ -50,6 +45,24 @@ class NekoBot {
      */
     public get imageEndpoint(): ImageEndpoint {
         return new ImageEndpoint(this);
+    }
+
+    /**
+     * @param {String} endpoint
+     * @param {*} query
+     */
+    public request(endpoint: string, query: any): Promise<superagent.Response> {
+        return new Promise((resolve, reject) => {
+            const req = superagent
+                .get(`${this.baseURL}${endpoint}`)
+                .query(query);
+            if (endpoint === "image" && this.token && donatorTypes.includes(query.type)) {
+                req.set("Authorization", this.token as string);
+            }
+            req
+                .then(resolve)
+                .catch(reject);
+        });
     }
 }
 

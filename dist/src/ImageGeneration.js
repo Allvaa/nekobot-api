@@ -1,13 +1,4 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ImageGeneration = void 0;
 /**
@@ -25,21 +16,13 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     threats(url) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "threats",
-                    url
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "threats",
+                url
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -48,21 +31,13 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     baguette(url) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "baguette",
-                    url
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "baguette",
+                url
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -71,21 +46,13 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     clyde(text) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "clyde",
-                    text
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "clyde",
+                text
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -95,22 +62,14 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     ship(user1, user2) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "ship",
-                    user1,
-                    user2
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "ship",
+                user1,
+                user2
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -120,22 +79,14 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     captcha(url, username) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "captcha",
-                    url,
-                    username
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "captcha",
+                url,
+                username
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -145,22 +96,14 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     whoWouldWin(user1, user2) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "whowouldwin",
-                    user1,
-                    user2
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "whowouldwin",
+                user1,
+                user2
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -169,21 +112,13 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     changemMyMind(text) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "changemymind",
-                    text
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "changemymind",
+                text
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -196,25 +131,17 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     ddlc(character, background, body, face, text) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body: b } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "ddlc",
-                    character,
-                    background,
-                    body,
-                    face,
-                    text
-                });
-                return b.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "ddlc",
+                character,
+                background,
+                body,
+                face,
+                text
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -223,21 +150,13 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     jpeg(url) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "jpeg",
-                    url
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "jpeg",
+                url
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -246,21 +165,13 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     lolice(url) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "lolice",
-                    url
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "lolice",
+                url
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -269,21 +180,13 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     kannagen(text) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "kannagen",
-                    text
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "kannagen",
+                text
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -292,21 +195,13 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     iphoneX(url) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "iphonex",
-                    url
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "iphonex",
+                url
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -315,21 +210,13 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     animeFace(image) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "animeface",
-                    image
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "animeface",
+                image
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -338,21 +225,13 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     awooify(url) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "awooify",
-                    url
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "awooify",
+                url
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -361,21 +240,13 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     trumpTweet(text) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "trumptweet",
-                    text
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "trumptweet",
+                text
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -385,22 +256,14 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     tweet(username, text) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "tweet",
-                    username,
-                    text
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "tweet",
+                username,
+                text
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -409,21 +272,13 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     deepFry(image) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "deepfry",
-                    image
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "deepfry",
+                image
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -432,21 +287,13 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     blurpify(image) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "blurpify",
-                    image
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "blurpify",
+                image
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -457,23 +304,15 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     phComment(image, text, username) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "phcomment",
-                    image,
-                    text,
-                    username
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "phcomment",
+                image,
+                text,
+                username
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -483,22 +322,14 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     magik(image, intensity) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "magik",
-                    image,
-                    intensity
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "magik",
+                image,
+                intensity
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -507,21 +338,13 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     fact(text) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "fact",
-                    text
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "fact",
+                text
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
     /**
@@ -530,21 +353,13 @@ class ImageGeneration {
      * @returns {(Promise<String | void>)} The image URL
      */
     trash(url) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { body } = yield this.client.request
-                    .get(`${this.client.baseURL}imagegen`)
-                    .query({
-                    type: "trash",
-                    url
-                });
-                return body.message;
-            }
-            catch (err) {
-                if (err.message === "Bad Request") {
-                    throw Error("Make sure the parameter(s) is correct!");
-                }
-            }
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "trash",
+                url
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
         });
     }
 }

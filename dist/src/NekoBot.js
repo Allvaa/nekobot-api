@@ -8,6 +8,7 @@ const superagent_1 = __importDefault(require("superagent"));
 const package_json_1 = require("../package.json");
 const ImageEndpoint_1 = require("./ImageEndpoint");
 const ImageGeneration_1 = require("./ImageGeneration");
+const donatorTypes = ["cosplay", "swimsuit"];
 /**
  * Creates an instance of NekoBot.
  * @class NekoBot
@@ -30,11 +31,6 @@ class NekoBot {
          * @type {String}
          */
         this.token = token;
-        /**
-         * Http client
-         * @type {request.SuperAgentStatic}
-         */
-        this.request = superagent_1.default;
     }
     /**
      * @readonly
@@ -49,6 +45,23 @@ class NekoBot {
      */
     get imageEndpoint() {
         return new ImageEndpoint_1.ImageEndpoint(this);
+    }
+    /**
+     * @param {String} endpoint
+     * @param {*} query
+     */
+    request(endpoint, query) {
+        return new Promise((resolve, reject) => {
+            const req = superagent_1.default
+                .get(`${this.baseURL}${endpoint}`)
+                .query(query);
+            if (endpoint === "image" && this.token && donatorTypes.includes(query.type)) {
+                req.set("Authorization", this.token);
+            }
+            req
+                .then(resolve)
+                .catch(reject);
+        });
     }
 }
 exports.NekoBot = NekoBot;

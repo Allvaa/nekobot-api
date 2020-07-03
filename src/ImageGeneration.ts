@@ -16,20 +16,15 @@ class ImageGeneration {
      * @param {String} url - Image URL to add to template.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async threats(url: String): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "threats",
-                    url
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public threats(url: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "threats",
+                url
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -37,20 +32,15 @@ class ImageGeneration {
      * @param {String} url - Any image URL to generate, can be user avatar or anything.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async baguette(url: String): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "baguette",
-                    url
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public baguette(url: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "baguette",
+                url
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -58,20 +48,15 @@ class ImageGeneration {
      * @param {String} text - Text to clydify.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async clyde(text: String): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "clyde",
-                    text
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public clyde(text: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "clyde",
+                text
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -80,21 +65,16 @@ class ImageGeneration {
      * @param {String} user2 - User 2’s avatar
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async ship(user1: String, user2: String): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "ship",
-                    user1,
-                    user2
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public ship(user1: String, user2: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "ship",
+                user1,
+                user2
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -103,24 +83,16 @@ class ImageGeneration {
      * @param {String} username - User’s username or or any other string to show up.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async captcha(
-        url: String,
-        username: String
-    ): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "captcha",
-                    url,
-                    username
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public captcha(url: String, username: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "captcha",
+                url,
+                username
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -129,24 +101,16 @@ class ImageGeneration {
      * @param {String} user2 - User 2’s avatar
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async whoWouldWin(
-        user1: String,
-        user2: String
-    ): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "whowouldwin",
-                    user1,
-                    user2
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public whoWouldWin(user1: String, user2: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "whowouldwin",
+                user1,
+                user2
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -154,20 +118,15 @@ class ImageGeneration {
      * @param {String} text - Change my mind text.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async changemMyMind(text: String): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "changemymind",
-                    text
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public changemMyMind(text: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "changemymind",
+                text
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -179,30 +138,19 @@ class ImageGeneration {
      * @param {String} text - Text for the character to say, max length of 140
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async ddlc(
-        character: String,
-        background: String,
-        body: String,
-        face: String,
-        text: String
-    ): Promise<String | void> {
-        try {
-            const { body: b } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "ddlc",
-                    character,
-                    background,
-                    body,
-                    face,
-                    text
-                });
-            return b.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public ddlc(character: String, background: String, body: String, face: String, text: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "ddlc",
+                character,
+                background,
+                body,
+                face,
+                text
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -210,20 +158,15 @@ class ImageGeneration {
      * @param {String} url - URL to JPEGify, would be recommended if the URL is as an JPEG or JPG format but PNG will still work :^)
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async jpeg(url: String): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "jpeg",
-                    url
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public jpeg(url: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "jpeg",
+                url
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -231,20 +174,15 @@ class ImageGeneration {
      * @param {String} url - Lolice chief
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async lolice(url: String): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "lolice",
-                    url
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public lolice(url: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "lolice",
+                url
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -252,20 +190,15 @@ class ImageGeneration {
      * @param {String} text - text to kannafy
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async kannagen(text: String): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "kannagen",
-                    text
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public kannagen(text: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "kannagen",
+                text
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -273,20 +206,15 @@ class ImageGeneration {
      * @param {String} url - Image to fill into an iphone.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async iphoneX(url: String): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "iphonex",
-                    url
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public iphoneX(url: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "iphonex",
+                url
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -294,20 +222,15 @@ class ImageGeneration {
      * @param {String} image - Image to find heccin weaboos
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async animeFace(image: String): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "animeface",
-                    image
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public animeFace(image: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "animeface",
+                image
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -315,20 +238,15 @@ class ImageGeneration {
      * @param {String} url - Users avatar to AwOOOOify :3
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async awooify(url: String): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "awooify",
-                    url
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public awooify(url: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "awooify",
+                url
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -336,20 +254,15 @@ class ImageGeneration {
      * @param {String} text - Text to TrumpTweet
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async trumpTweet(text: String): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "trumptweet",
-                    text
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public trumpTweet(text: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "trumptweet",
+                text
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -358,21 +271,16 @@ class ImageGeneration {
      * @param {String} text - Text to Tweet
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async tweet(username: String, text: String): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "tweet",
-                    username,
-                    text
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public tweet(username: String, text: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "tweet",
+                username,
+                text
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -380,20 +288,15 @@ class ImageGeneration {
      * @param {String} image - Image URL to DeepFry.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async deepFry(image: String): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "deepfry",
-                    image
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public deepFry(image: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "deepfry",
+                image
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -401,20 +304,15 @@ class ImageGeneration {
      * @param {String} image - Image URL to Blurpify.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async blurpify(image: String): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "blurpify",
-                    image
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public blurpify(image: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "blurpify",
+                image
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -424,26 +322,17 @@ class ImageGeneration {
      * @param {String} username - User's Username.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async phComment(
-        image: String,
-        text: String,
-        username: String
-    ): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "phcomment",
-                    image,
-                    text,
-                    username
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public phComment(image: String, text: String, username: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "phcomment",
+                image,
+                text,
+                username
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -452,24 +341,16 @@ class ImageGeneration {
      * @param {Number} [intensity] - an integer of magik intensity from 0 to 10
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async magik(
-        image: String,
-        intensity?: Number
-    ): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "magik",
-                    image,
-                    intensity
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public magik(image: String, intensity?: Number): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "magik",
+                image,
+                intensity
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -477,20 +358,15 @@ class ImageGeneration {
      * @param {String} text - No description provided..
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async fact(text: String): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "fact",
-                    text
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public fact(text: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "fact",
+                text
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 
     /**
@@ -498,20 +374,15 @@ class ImageGeneration {
      * @param {String} url - URL of trash waifu
      * @returns {(Promise<String | void>)} The image URL
      */
-    public async trash(url: String): Promise<String | void> {
-        try {
-            const { body } = await this.client.request
-                .get(`${this.client.baseURL}imagegen`)
-                .query({
-                    type: "trash",
-                    url
-                });
-            return body.message;
-        } catch (err) {
-            if (err.message === "Bad Request") {
-                throw Error("Make sure the parameter(s) is correct!");
-            }
-        }
+    public trash(url: String): Promise<String | void> {
+        return new Promise((resolve, reject) => {
+            this.client.request("imagegen", {
+                type: "trash",
+                url
+            })
+                .then(res => resolve(res.body.message))
+                .catch(reject);
+        });
     }
 }
 
