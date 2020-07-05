@@ -10,10 +10,10 @@ const donatorTypes = ["cosplay", "swimsuit"];
  * @param {String} [token]
  */
 class NekoBot {
-    public version: String;
-    public baseURL: String;
-    public token?: String;
-    constructor(token?: String) {
+    public version: string;
+    public baseURL: string;
+    public token?: string;
+    constructor(token?: string) {
         /**
          * Lib version
          * @type {String}

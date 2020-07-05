@@ -1,3 +1,5 @@
+import { ClientRequest, IncomingMessage } from "http";
+
 export type ImageEndpointType =
     | "hass"
     | "hmidriff"
@@ -24,3 +26,40 @@ export type ImageEndpointType =
     | "paizuri"
     | "tentacle"
     | "swimsuit";
+
+export type DDLCCharacterType =
+    | "monika"
+    | "yuri"
+    | "natsuki"
+    | "sayori"
+    | "m"
+    | "y"
+    | "n"
+    | "s";
+
+export type DDLCBackgroundType =
+    | "bedroom"
+    | "class"
+    | "closet"
+    | "club"
+    | "corridor"
+    | "house"
+    | "kitchen"
+    | "residential"
+    | "sayori_bedroom";
+
+export type DDLCBodyType =
+    | "1"
+    | "1b"
+    | "2"
+    | "2b";
+
+export interface NBRResponse {
+    status: number;
+    headers: any;
+    raw: Buffer;
+    text: string;
+    body: any;
+    req: ClientRequest;
+    res: IncomingMessage;
+}

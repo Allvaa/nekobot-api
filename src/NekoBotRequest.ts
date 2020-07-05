@@ -1,6 +1,7 @@
 import { NekoBot } from "./NekoBot";
 import https from "https";
 import pkg from "../package.json";
+import { NBRResponse } from "./Types";
 
 class NekoBotRequest {
     client: NekoBot;
@@ -8,7 +9,7 @@ class NekoBotRequest {
         this.client = client;
     }
 
-    get(endpoint: string, options: { query?: any, headers?: any }) {
+    get(endpoint: string, options: { query?: any, headers?: any }): Promise<NBRResponse> {
         const opt: https.RequestOptions = {
             hostname: this.client.baseURL as string,
             path: `/api/${endpoint}?${new URLSearchParams(options?.query).toString()}`,
@@ -28,7 +29,7 @@ class NekoBotRequest {
                     })
                     .on("end", () => {
                         resolve({
-                            status: res.statusCode,
+                            status: res.statusCode!,
                             headers: res.headers,
                             raw,
                             text: raw.toString(),

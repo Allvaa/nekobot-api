@@ -1,4 +1,5 @@
 import { NekoBot } from "./NekoBot";
+import { DDLCCharacterType, DDLCBackgroundType, DDLCBodyType } from "./Types";
 
 /**
  * Creates an instance of ImageGeneration.
@@ -16,7 +17,7 @@ class ImageGeneration {
      * @param {String} url - Image URL to add to template.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public threats(url: String): Promise<String | void> {
+    public threats(url: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "threats",
@@ -32,7 +33,7 @@ class ImageGeneration {
      * @param {String} url - Any image URL to generate, can be user avatar or anything.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public baguette(url: String): Promise<String | void> {
+    public baguette(url: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "baguette",
@@ -48,7 +49,7 @@ class ImageGeneration {
      * @param {String} text - Text to clydify.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public clyde(text: String): Promise<String | void> {
+    public clyde(text: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "clyde",
@@ -65,7 +66,7 @@ class ImageGeneration {
      * @param {String} user2 - User 2’s avatar
      * @returns {(Promise<String | void>)} The image URL
      */
-    public ship(user1: String, user2: String): Promise<String | void> {
+    public ship(user1: string, user2: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "ship",
@@ -83,7 +84,7 @@ class ImageGeneration {
      * @param {String} username - User’s username or or any other string to show up.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public captcha(url: String, username: String): Promise<String | void> {
+    public captcha(url: string, username: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "captcha",
@@ -101,7 +102,7 @@ class ImageGeneration {
      * @param {String} user2 - User 2’s avatar
      * @returns {(Promise<String | void>)} The image URL
      */
-    public whoWouldWin(user1: String, user2: String): Promise<String | void> {
+    public whoWouldWin(user1: string, user2: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "whowouldwin",
@@ -118,7 +119,7 @@ class ImageGeneration {
      * @param {String} text - Change my mind text.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public changemMyMind(text: String): Promise<String | void> {
+    public changemMyMind(text: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "changemymind",
@@ -138,7 +139,7 @@ class ImageGeneration {
      * @param {String} text - Text for the character to say, max length of 140
      * @returns {(Promise<String | void>)} The image URL
      */
-    public ddlc(character: String, background: String, body: String, face: String, text: String): Promise<String | void> {
+    public ddlc(character: DDLCCharacterType, background: DDLCBackgroundType, body: DDLCBodyType, face: string, text: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "ddlc",
@@ -158,7 +159,7 @@ class ImageGeneration {
      * @param {String} url - URL to JPEGify, would be recommended if the URL is as an JPEG or JPG format but PNG will still work :^)
      * @returns {(Promise<String | void>)} The image URL
      */
-    public jpeg(url: String): Promise<String | void> {
+    public jpeg(url: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "jpeg",
@@ -174,7 +175,7 @@ class ImageGeneration {
      * @param {String} url - Lolice chief
      * @returns {(Promise<String | void>)} The image URL
      */
-    public lolice(url: String): Promise<String | void> {
+    public lolice(url: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "lolice",
@@ -190,7 +191,7 @@ class ImageGeneration {
      * @param {String} text - text to kannafy
      * @returns {(Promise<String | void>)} The image URL
      */
-    public kannagen(text: String): Promise<String | void> {
+    public kannagen(text: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "kannagen",
@@ -206,7 +207,7 @@ class ImageGeneration {
      * @param {String} url - Image to fill into an iphone.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public iphoneX(url: String): Promise<String | void> {
+    public iphoneX(url: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "iphonex",
@@ -222,7 +223,7 @@ class ImageGeneration {
      * @param {String} image - Image to find heccin weaboos
      * @returns {(Promise<String | void>)} The image URL
      */
-    public animeFace(image: String): Promise<String | void> {
+    public animeFace(image: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "animeface",
@@ -238,7 +239,7 @@ class ImageGeneration {
      * @param {String} url - Users avatar to AwOOOOify :3
      * @returns {(Promise<String | void>)} The image URL
      */
-    public awooify(url: String): Promise<String | void> {
+    public awooify(url: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "awooify",
@@ -254,7 +255,7 @@ class ImageGeneration {
      * @param {String} text - Text to TrumpTweet
      * @returns {(Promise<String | void>)} The image URL
      */
-    public trumpTweet(text: String): Promise<String | void> {
+    public trumpTweet(text: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "trumptweet",
@@ -271,7 +272,7 @@ class ImageGeneration {
      * @param {String} text - Text to Tweet
      * @returns {(Promise<String | void>)} The image URL
      */
-    public tweet(username: String, text: String): Promise<String | void> {
+    public tweet(username: string, text: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "tweet",
@@ -288,7 +289,7 @@ class ImageGeneration {
      * @param {String} image - Image URL to DeepFry.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public deepFry(image: String): Promise<String | void> {
+    public deepFry(image: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "deepfry",
@@ -304,7 +305,7 @@ class ImageGeneration {
      * @param {String} image - Image URL to Blurpify.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public blurpify(image: String): Promise<String | void> {
+    public blurpify(image: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "blurpify",
@@ -322,7 +323,7 @@ class ImageGeneration {
      * @param {String} username - User's Username.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public phComment(image: String, text: String, username: String): Promise<String | void> {
+    public phComment(image: string, text: string, username: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "phcomment",
@@ -341,7 +342,7 @@ class ImageGeneration {
      * @param {Number} [intensity] - an integer of magik intensity from 0 to 10
      * @returns {(Promise<String | void>)} The image URL
      */
-    public magik(image: String, intensity?: Number): Promise<String | void> {
+    public magik(image: string, intensity?: number): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "magik",
@@ -358,7 +359,7 @@ class ImageGeneration {
      * @param {String} text - No description provided..
      * @returns {(Promise<String | void>)} The image URL
      */
-    public fact(text: String): Promise<String | void> {
+    public fact(text: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "fact",
@@ -374,7 +375,7 @@ class ImageGeneration {
      * @param {String} url - URL of trash waifu
      * @returns {(Promise<String | void>)} The image URL
      */
-    public trash(url: String): Promise<String | void> {
+    public trash(url: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "trash",
