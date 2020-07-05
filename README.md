@@ -14,7 +14,7 @@ yarn add nekobot-api
 ## Example Usage
 ```js
 const { NekoBot } = require("nekobot-api");
-const api = new NekoBot();
+const api = new NekoBot("token"); // token are only needed for donator types in Image Endpoint. so you can leave it empty.
 
 async function run() {
     let image = await api.imageGen.magik("image url"); // returns a string.
