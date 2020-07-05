@@ -6,10 +6,14 @@ import { ImageGeneration } from "./ImageGeneration";
  * @param {String} [token]
  */
 declare class NekoBot {
-    version: string;
     baseURL: string;
     token?: string;
     constructor(token?: string);
+    /**
+     * @readonly
+     * @returns {String} Package version
+     */
+    get version(): string;
     /**
      * @readonly
      * @returns {ImageGeneration} ImageGeneration class
@@ -21,6 +25,7 @@ declare class NekoBot {
      */
     get imageEndpoint(): ImageEndpoint;
     /**
+     * Function to send requests to the API.
      * @param {String} endpoint
      * @param {*} query
      */

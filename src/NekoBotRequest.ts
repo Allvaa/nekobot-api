@@ -11,7 +11,7 @@ class NekoBotRequest {
 
     get(endpoint: string, options: { query?: any, headers?: any }): Promise<NBRResponse> {
         const opt: https.RequestOptions = {
-            hostname: this.client.baseURL as string,
+            hostname: this.client.baseURL.replace(/(^\w+:|^)\/\//, ""),
             path: `/api/${endpoint}?${new URLSearchParams(options?.query).toString()}`,
             method: "GET",
             headers: {

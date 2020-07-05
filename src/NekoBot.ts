@@ -10,25 +10,27 @@ const donatorTypes = ["cosplay", "swimsuit"];
  * @param {String} [token]
  */
 class NekoBot {
-    public version: string;
     public baseURL: string;
     public token?: string;
     constructor(token?: string) {
         /**
-         * Lib version
+         * Base URL
          * @type {String}
          */
-        this.version = version;
-        /**
-         * API URL
-         * @type {String}
-         */
-        this.baseURL = "nekobot.xyz";
+        this.baseURL = "https://nekobot.xyz";
         /**
          * API Token (required for donator types in Image Endpoints)
          * @type {String}
          */
-        this.token = token;
+        if (token) this.token = token;
+    }
+
+    /**
+     * @readonly
+     * @returns {String} Package version
+     */
+    public get version(): string {
+        return version;
     }
 
     /**
@@ -48,6 +50,7 @@ class NekoBot {
     }
 
     /**
+     * Function to send requests to the API.
      * @param {String} endpoint
      * @param {*} query
      */

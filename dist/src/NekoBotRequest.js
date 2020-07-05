@@ -12,7 +12,7 @@ class NekoBotRequest {
     }
     get(endpoint, options) {
         const opt = {
-            hostname: this.client.baseURL,
+            hostname: this.client.baseURL.replace(/(^\w+:|^)\/\//, ""),
             path: `/api/${endpoint}?${new URLSearchParams(options === null || options === void 0 ? void 0 : options.query).toString()}`,
             method: "GET",
             headers: Object.assign({ "content-type": "application/json", "user-agent": `${package_json_1.default.name}/${package_json_1.default.version} (${package_json_1.default.repository.url})` }, options === null || options === void 0 ? void 0 : options.headers)
