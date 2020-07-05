@@ -1,4 +1,3 @@
-import superagent from "superagent";
 import { version } from "../package.json";
 import { ImageEndpoint } from "./ImageEndpoint";
 import { ImageGeneration } from "./ImageGeneration";

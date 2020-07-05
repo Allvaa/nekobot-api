@@ -41,9 +41,7 @@
     "prettier": "^2.0.5",
     "typescript": "^3.8.2"
   },
-  "dependencies": {
-    "superagent": "^5.2.2"
-  },
+  "dependencies": {},
   "prettier": {
     "trailingComma": "es5",
     "tabWidth": 4,
