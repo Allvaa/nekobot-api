@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ImageEndpoint = void 0;
-const donatorTypes = ["cosplay", "swimsuit"];
 /**
  * Creates an instance of ImageEndpoint.
  * @class ImageEndpoint

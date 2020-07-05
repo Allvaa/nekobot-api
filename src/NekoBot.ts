@@ -2,6 +2,7 @@ import superagent from "superagent";
 import { version } from "../package.json";
 import { ImageEndpoint } from "./ImageEndpoint";
 import { ImageGeneration } from "./ImageGeneration";
+import { NekoBotRequest } from "./NekoBotRequest";
 const donatorTypes = ["cosplay", "swimsuit"];
 
 /**
@@ -23,7 +24,7 @@ class NekoBot {
          * API URL
          * @type {String}
          */
-        this.baseURL = "https://nekobot.xyz/api/";
+        this.baseURL = "nekobot.xyz";
         /**
          * API Token (required for donator types in Image Endpoints)
          * @type {String}
@@ -51,18 +52,23 @@ class NekoBot {
      * @param {String} endpoint
      * @param {*} query
      */
-    public request(endpoint: string, query: any): Promise<superagent.Response> {
+    public request(endpoint: string, query: any): Promise<any> {
+        const opt: any = {
+            query,
+            headers: {}
+        };
+        if (endpoint === "image" && this.token && donatorTypes.includes(query.type)) {
+            opt.headers["Authorization"] = this.token; // eslint-disable-line
+        }
         return new Promise((resolve, reject) => {
-            const req = superagent
-                .get(`${this.baseURL}${endpoint}`)
-                .query(query);
-            if (endpoint === "image" && this.token && donatorTypes.includes(query.type)) {
-                req.set("Authorization", this.token as string);
-            }
-            req
+            this._request.get(endpoint, opt)
                 .then(resolve)
                 .catch(reject);
         });
+    }
+
+    private get _request() {
+        return new NekoBotRequest(this);
     }
 }
 

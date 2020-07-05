@@ -1,4 +1,3 @@
-import superagent from "superagent";
 import { ImageEndpoint } from "./ImageEndpoint";
 import { ImageGeneration } from "./ImageGeneration";
 /**
@@ -25,6 +24,7 @@ declare class NekoBot {
      * @param {String} endpoint
      * @param {*} query
      */
-    request(endpoint: string, query: any): Promise<superagent.Response>;
+    request(endpoint: string, query: any): Promise<any>;
+    private get _request();
 }
 export { NekoBot };

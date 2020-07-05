@@ -1,13 +1,10 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NekoBot = void 0;
-const superagent_1 = __importDefault(require("superagent"));
 const package_json_1 = require("../package.json");
 const ImageEndpoint_1 = require("./ImageEndpoint");
 const ImageGeneration_1 = require("./ImageGeneration");
+const NekoBotRequest_1 = require("./NekoBotRequest");
 const donatorTypes = ["cosplay", "swimsuit"];
 /**
  * Creates an instance of NekoBot.
@@ -25,7 +22,7 @@ class NekoBot {
          * API URL
          * @type {String}
          */
-        this.baseURL = "https://nekobot.xyz/api/";
+        this.baseURL = "nekobot.xyz";
         /**
          * API Token (required for donator types in Image Endpoints)
          * @type {String}
@@ -51,17 +48,21 @@ class NekoBot {
      * @param {*} query
      */
     request(endpoint, query) {
+        const opt = {
+            query,
+            headers: {}
+        };
+        if (endpoint === "image" && this.token && donatorTypes.includes(query.type)) {
+            opt.headers["Authorization"] = this.token; // eslint-disable-line
+        }
         return new Promise((resolve, reject) => {
-            const req = superagent_1.default
-                .get(`${this.baseURL}${endpoint}`)
-                .query(query);
-            if (endpoint === "image" && this.token && donatorTypes.includes(query.type)) {
-                req.set("Authorization", this.token);
-            }
-            req
+            this._request.get(endpoint, opt)
                 .then(resolve)
                 .catch(reject);
         });
+    }
+    get _request() {
+        return new NekoBotRequest_1.NekoBotRequest(this);
     }
 }
 exports.NekoBot = NekoBot;
