@@ -100,6 +100,14 @@ declare class ImageGeneration {
      */
     awooify(url: string): Promise<string | void>;
     /**
+     * Trap Image
+     * @param {String} name - User to trap.
+     * @param {String} author - Author trapping user.
+     * @param {String} image - Avatar’s URL to trap.
+     * @returns {Promise<String>} The Image URL
+     */
+    trap(name: string, author: string, image: string): Promise<string>;
+    /**
      * TrumpTweet Image
      * @param {String} text - Text to TrumpTweet
      * @returns {(Promise<String | void>)} The image URL
