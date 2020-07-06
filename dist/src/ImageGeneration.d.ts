@@ -3,10 +3,13 @@ import { DDLCCharacterType, DDLCBackgroundType, DDLCBodyType } from "./Types";
 /**
  * Creates an instance of ImageGeneration.
  * @class ImageGeneration
- * @param {NekoBot} client
  */
 declare class ImageGeneration {
     client: NekoBot;
+    /**
+     * @constructor
+     * @param {NekoBot} client
+     */
     constructor(client: NekoBot);
     /**
      * Threats Image

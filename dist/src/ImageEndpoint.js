@@ -4,9 +4,12 @@ exports.ImageEndpoint = void 0;
 /**
  * Creates an instance of ImageEndpoint.
  * @class ImageEndpoint
- * @param {NekoBot} client
  */
 class ImageEndpoint {
+    /**
+     * @constructor
+     * @param {NekoBot} client
+     */
     constructor(client) {
         this.client = client;
     }

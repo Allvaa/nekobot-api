@@ -6,10 +6,26 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.NekoBotRequest = void 0;
 const https_1 = __importDefault(require("https"));
 const package_json_1 = __importDefault(require("../package.json"));
+/**
+ * Creates an instance of NekoBotRequest.
+ * @class NekoBotRequest
+ */
 class NekoBotRequest {
+    /**
+     * @constructor
+     * @param {NekoBot} client
+     */
     constructor(client) {
         this.client = client;
     }
+    /**
+     * Send GET request.
+     * @param {string} endpoint
+     * @param {Object} options
+     * @param {*} options.query
+     * @param {*} options.headers
+     * @returns {Promise<NBRResponse>}
+     */
     get(endpoint, options) {
         const urlq = [...Object.entries(options.query)].filter(x => Boolean(x[1])).map(x => `${x[0]}=${x[1]}`).join("&");
         const opt = {

@@ -4,10 +4,14 @@ import { ImageEndpointType } from "./Types";
 /**
  * Creates an instance of ImageEndpoint.
  * @class ImageEndpoint
- * @param {NekoBot} client
  */
 class ImageEndpoint {
     public client: NekoBot;
+
+    /**
+     * @constructor
+     * @param {NekoBot} client
+     */
     constructor(client: NekoBot) {
         this.client = client;
     }

@@ -4,11 +4,14 @@ import { NBRResponse } from "./Types";
 /**
  * Creates an instance of NekoBot.
  * @class NekoBot
- * @param {string} [token]
  */
 declare class NekoBot {
     baseURL: string;
     token?: string;
+    /**
+     * @constructor
+     * @param {string} [token]
+     */
     constructor(token?: string);
     /**
      * Package version

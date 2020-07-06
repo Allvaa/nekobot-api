@@ -16,5 +16,11 @@
   "exclude": [
     "./dist/*",
     "./node_modules/*"
-  ]
+  ],
+  "typedocOptions": {
+		"out": "./docs",
+		"readme": "./README.md",
+		"name": "nekobot-api",
+		"mode": "file",
+ }
 }

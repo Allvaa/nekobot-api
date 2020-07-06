@@ -8,11 +8,15 @@ const donatorTypes = ["cosplay", "swimsuit"];
 /**
  * Creates an instance of NekoBot.
  * @class NekoBot
- * @param {string} [token]
  */
 class NekoBot {
     public baseURL: string;
     public token?: string;
+
+    /**
+     * @constructor
+     * @param {string} [token]
+     */
     constructor(token?: string) {
         /**
          * Base URL

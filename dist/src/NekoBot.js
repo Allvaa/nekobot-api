@@ -9,9 +9,12 @@ const donatorTypes = ["cosplay", "swimsuit"];
 /**
  * Creates an instance of NekoBot.
  * @class NekoBot
- * @param {string} [token]
  */
 class NekoBot {
+    /**
+     * @constructor
+     * @param {string} [token]
+     */
     constructor(token) {
         /**
          * Base URL

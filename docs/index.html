@@ -1,138 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="default no-js">
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>
-      Home - Documentation
-  </title>
-
-  <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
-  
-  <link type="text/css" rel="stylesheet" href="styles/collapse.css">
-  
-
-  
-
-  <!-- start Mixpanel -->
-  <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
-  0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
-  for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
-  mixpanel.init("1919205b2da72e4da3b9b6639b444d59");</script>
-  <!-- end Mixpanel -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>nekobot-api</title>
+	<meta name="description" content="Documentation for nekobot-api">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
 </head>
-
 <body>
-  <svg style="display: none;">
-    <defs>
-      <symbol id="linkIcon" fill="#706d77" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 0h24v24H0z" fill="none"/>
-          <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
-      </symbol>
-    </defs>
-  </svg>
-
-  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-  <label for="nav-trigger" class="navicon-button x">
-    <div class="navicon"></div>
-  </label>
-
-  <label for="nav-trigger" class="overlay"></label>
-
-  <div class="top-nav-wrapper">
-    <ul>
-      <li  class="active" >
-        <a href="index.html">
-          
-          
-            <svg fill="#0095dd" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-              <path d="M0 0h24v24H0z" fill="none"/>
-            </svg>
-          
-        </a>
-      </li>
-
-      
-
-    </ul>
-  </div>
-
-  <nav>
-    <h3 class="reference-title">
-      nekobot-api
-    </h3>
-
-    
-
-    <h3>Classes</h3><ul><li id="ImageEndpoint-nav"><a href="ImageEndpoint.html">ImageEndpoint</a><ul class='methods'><li data-type="method" id="ImageEndpoint-getImage-nav"><a href="ImageEndpoint.html#getImage">getImage</a></li></ul></li><li id="ImageGeneration-nav"><a href="ImageGeneration.html">ImageGeneration</a><ul class='methods'><li data-type="method" id="ImageGeneration-animeFace-nav"><a href="ImageGeneration.html#animeFace">animeFace</a></li><li data-type="method" id="ImageGeneration-awooify-nav"><a href="ImageGeneration.html#awooify">awooify</a></li><li data-type="method" id="ImageGeneration-baguette-nav"><a href="ImageGeneration.html#baguette">baguette</a></li><li data-type="method" id="ImageGeneration-blurpify-nav"><a href="ImageGeneration.html#blurpify">blurpify</a></li><li data-type="method" id="ImageGeneration-captcha-nav"><a href="ImageGeneration.html#captcha">captcha</a></li><li data-type="method" id="ImageGeneration-changeMyMind-nav"><a href="ImageGeneration.html#changeMyMind">changeMyMind</a></li><li data-type="method" id="ImageGeneration-clyde-nav"><a href="ImageGeneration.html#clyde">clyde</a></li><li data-type="method" id="ImageGeneration-ddlc-nav"><a href="ImageGeneration.html#ddlc">ddlc</a></li><li data-type="method" id="ImageGeneration-deepFry-nav"><a href="ImageGeneration.html#deepFry">deepFry</a></li><li data-type="method" id="ImageGeneration-fact-nav"><a href="ImageGeneration.html#fact">fact</a></li><li data-type="method" id="ImageGeneration-iphoneX-nav"><a href="ImageGeneration.html#iphoneX">iphoneX</a></li><li data-type="method" id="ImageGeneration-jpeg-nav"><a href="ImageGeneration.html#jpeg">jpeg</a></li><li data-type="method" id="ImageGeneration-kannagen-nav"><a href="ImageGeneration.html#kannagen">kannagen</a></li><li data-type="method" id="ImageGeneration-lolice-nav"><a href="ImageGeneration.html#lolice">lolice</a></li><li data-type="method" id="ImageGeneration-magik-nav"><a href="ImageGeneration.html#magik">magik</a></li><li data-type="method" id="ImageGeneration-phComment-nav"><a href="ImageGeneration.html#phComment">phComment</a></li><li data-type="method" id="ImageGeneration-ship-nav"><a href="ImageGeneration.html#ship">ship</a></li><li data-type="method" id="ImageGeneration-threats-nav"><a href="ImageGeneration.html#threats">threats</a></li><li data-type="method" id="ImageGeneration-trap-nav"><a href="ImageGeneration.html#trap">trap</a></li><li data-type="method" id="ImageGeneration-trash-nav"><a href="ImageGeneration.html#trash">trash</a></li><li data-type="method" id="ImageGeneration-trumpTweet-nav"><a href="ImageGeneration.html#trumpTweet">trumpTweet</a></li><li data-type="method" id="ImageGeneration-tweet-nav"><a href="ImageGeneration.html#tweet">tweet</a></li><li data-type="method" id="ImageGeneration-whoWouldWin-nav"><a href="ImageGeneration.html#whoWouldWin">whoWouldWin</a></li></ul></li><li id="NekoBot-nav"><a href="NekoBot.html">NekoBot</a><ul class='methods'><li data-type="method" id="NekoBot-request-nav"><a href="NekoBot.html#request">request</a></li></ul></li></ul>
-  </nav>
-
-  <div id="main">
-    
-
-    
-      
-
-
-
-    
-
-      
-
-
-  <section class="readme">
-    <article>
-      <h1>nekobot-api <a href="https://circleci.com/gh/Allvaa/nekobot-api"><img src="https://circleci.com/gh/Allvaa/nekobot-api.svg?style=svg" alt="CircleCI"></a> <a href="https://david-dm.org/Allvaa/nekobot-api"><img src="https://img.shields.io/david/Allvaa/nekobot-api.svg" alt="Depedencies"></a></h1>
-<p><a href="https://nekobot.xyz/">NekoBot</a> API wrapper for Node.js</p>
-<h2>Installing</h2>
-<p><a href="https://nodei.co/npm/nekobot-api"><img src="https://nodei.co/npm/nekobot-api.png?compact=true" alt="Version"></a></p>
-<pre class="prettyprint source lang-sh"><code># npm
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">nekobot-api</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>nekobot-api</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#nekobot-api--" id="nekobot-api--" style="color: inherit; text-decoration: none;">
+					<h1>nekobot-api <a href="https://circleci.com/gh/Allvaa/nekobot-api"><img src="https://circleci.com/gh/Allvaa/nekobot-api.svg?style=svg" alt="CircleCI"></a> <a href="https://david-dm.org/Allvaa/nekobot-api"><img src="https://img.shields.io/david/Allvaa/nekobot-api.svg" alt="Depedencies"></a></h1>
+				</a>
+				<p><a href="https://nekobot.xyz/">NekoBot</a> API wrapper for Node.js</p>
+				<a href="#installing" id="installing" style="color: inherit; text-decoration: none;">
+					<h2>Installing</h2>
+				</a>
+				<p><a href="https://nodei.co/npm/nekobot-api"><img src="https://nodei.co/npm/nekobot-api.png?compact=true" alt="Version"></a></p>
+				<pre><code class="language-sh"><span class="hljs-comment"># npm</span>
 npm i nekobot-api
 
-# yarn
-yarn add nekobot-api
-</code></pre>
-<h2>Example Usage</h2>
-<pre class="prettyprint source lang-js"><code>const { NekoBot } = require(&quot;nekobot-api&quot;);
-const api = new NekoBot(&quot;token&quot;); // token are only needed for donator types in Image Endpoint. so you can leave it empty.
+<span class="hljs-comment"># yarn</span>
+yarn add nekobot-api</code></pre>
+				<a href="#example-usage" id="example-usage" style="color: inherit; text-decoration: none;">
+					<h2>Example Usage</h2>
+				</a>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { NekoBot } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;nekobot-api&quot;</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> NekoBot(<span class="hljs-string">&quot;token&quot;</span>); <span class="hljs-comment">// token are only needed for donator types in Image Endpoint. so you can leave it empty.</span>
 
-async function run() {
-    let image = await api.imageGen.magik(&quot;image url&quot;); // returns a string.
-    console.log(image);
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">run</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">let</span> image = <span class="hljs-keyword">await</span> api.imageGen.magik(<span class="hljs-string">&quot;image url&quot;</span>); <span class="hljs-comment">// returns a string.</span>
+    <span class="hljs-built_in">console</span>.log(image);
 }
-run();
-</code></pre>
-<p><a href="https://nba.allvzx.website">Documentation</a></p>
-    </article>
-  </section>
-
-
-    
-
-
-  </div>
-
-  <br class="clear">
-
-  <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a>
-  </footer>
-
-  <script src="scripts/linenumber.js"></script>
-  <script src="scripts/pagelocation.js"></script>
-
-  
-
+run();</code></pre>
+				<p><a href="https://nba.allvzx.website">Documentation</a></p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="classes/imageendpoint.html" class="tsd-kind-icon">Image<wbr>Endpoint</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/imagegeneration.html" class="tsd-kind-icon">Image<wbr>Generation</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/nekobot.html" class="tsd-kind-icon">Neko<wbr>Bot</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/nekobotrequest.html" class="tsd-kind-icon">Neko<wbr>Bot<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/nbrresponse.html" class="tsd-kind-icon">NBRResponse</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#ddlcbackgroundtype" class="tsd-kind-icon">DDLCBackground<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#ddlcbodytype" class="tsd-kind-icon">DDLCBody<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#ddlccharactertype" class="tsd-kind-icon">DDLCCharacter<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#imageendpointtype" class="tsd-kind-icon">Image<wbr>Endpoint<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#donatortypes" class="tsd-kind-icon">donator<wbr>Types</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

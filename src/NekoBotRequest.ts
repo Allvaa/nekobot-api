@@ -3,12 +3,29 @@ import https from "https";
 import pkg from "../package.json";
 import { NBRResponse } from "./Types";
 
+/**
+ * Creates an instance of NekoBotRequest.
+ * @class NekoBotRequest
+ */
 class NekoBotRequest {
     client: NekoBot;
+
+    /**
+     * @constructor
+     * @param {NekoBot} client
+     */
     constructor(client: NekoBot) {
         this.client = client;
     }
 
+    /**
+     * Send GET request.
+     * @param {string} endpoint
+     * @param {Object} options
+     * @param {*} options.query
+     * @param {*} options.headers
+     * @returns {Promise<NBRResponse>}
+     */
     get(endpoint: string, options: { query?: any, headers?: any }): Promise<NBRResponse> {
         const urlq = [...Object.entries(options.query)].filter(x => Boolean(x[1])).map(x => `${x[0]}=${x[1]}`).join("&");
         const opt: https.RequestOptions = {
@@ -46,7 +63,7 @@ class NekoBotRequest {
         });
     }
 
-    parseJSON(stringJSON: string): any {
+    private parseJSON(stringJSON: string): any {
         try {
             return JSON.parse(stringJSON);
         } catch (e) {}

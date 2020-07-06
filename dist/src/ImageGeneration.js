@@ -4,9 +4,12 @@ exports.ImageGeneration = void 0;
 /**
  * Creates an instance of ImageGeneration.
  * @class ImageGeneration
- * @param {NekoBot} client
  */
 class ImageGeneration {
+    /**
+     * @constructor
+     * @param {NekoBot} client
+     */
     constructor(client) {
         this.client = client;
     }
