@@ -52,7 +52,7 @@ declare class ImageGeneration {
      * @param {String} text - Change my mind text.
      * @returns {(Promise<String | void>)} The image URL
      */
-    changemMyMind(text: string): Promise<string | void>;
+    changeMyMind(text: string): Promise<string | void>;
     /**
      * DDLC Image
      * @param {String} character - Can be either monika, yuri, natsuki, sayori or m, y, n, s

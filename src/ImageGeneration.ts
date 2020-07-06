@@ -119,7 +119,7 @@ class ImageGeneration {
      * @param {String} text - Change my mind text.
      * @returns {(Promise<String | void>)} The image URL
      */
-    public changemMyMind(text: string): Promise<string | void> {
+    public changeMyMind(text: string): Promise<string | void> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "changemymind",
