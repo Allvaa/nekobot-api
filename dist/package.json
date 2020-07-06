@@ -1,6 +1,6 @@
 {
     "name": "nekobot-api",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "description": "NekoBot API wrapper for Node.js",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -30,14 +30,12 @@
         "@types/node": "^14.0.14",
         "@typescript-eslint/eslint-plugin": "^3.2.0",
         "@typescript-eslint/parser": "^3.2.0",
-        "braintree-jsdoc-template": "^3.3.0",
         "eslint": "^7.2.0",
         "eslint-config-standard": "^14.1.1",
         "eslint-plugin-import": "^2.21.2",
         "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-promise": "^4.2.1",
         "eslint-plugin-standard": "^4.0.1",
-        "jsdoc": "^3.6.3",
         "prettier": "^2.0.5",
         "typedoc": "^0.17.8",
         "typescript": "^3.8.2"
