@@ -1,5 +1,3 @@
-import { ClientRequest, IncomingMessage } from "http";
-
 export type ImageEndpointType =
     | "hass"
     | "hmidriff"
@@ -58,8 +56,5 @@ export interface NBRResponse {
     status: number;
     headers: any;
     raw: Buffer;
-    text: string;
     body: any;
-    req: ClientRequest;
-    res: IncomingMessage;
 }

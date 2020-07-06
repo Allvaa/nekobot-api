@@ -25,20 +25,28 @@ class NekoBotRequest {
                     raw = chunk;
                 })
                     .on("end", () => {
-                    resolve({
-                        status: res.statusCode,
-                        headers: res.headers,
-                        raw,
-                        text: raw.toString(),
-                        body: JSON.parse(raw.toString()),
-                        req,
-                        res
-                    });
+                    if (!(res.statusCode >= 200 && res.statusCode < 300)) {
+                        reject(new Error(res.statusMessage));
+                    }
+                    else {
+                        resolve({
+                            status: res.statusCode,
+                            headers: res.headers,
+                            raw,
+                            body: this.parseJSON(raw.toString()) || {}
+                        });
+                    }
                 })
                     .on("error", reject);
             });
             req.end();
         });
+    }
+    parseJSON(stringJSON) {
+        try {
+            return JSON.parse(stringJSON);
+        }
+        catch (e) { }
     }
 }
 exports.NekoBotRequest = NekoBotRequest;

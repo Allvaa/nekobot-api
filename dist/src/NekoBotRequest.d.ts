@@ -7,5 +7,6 @@ declare class NekoBotRequest {
         query?: any;
         headers?: any;
     }): Promise<NBRResponse>;
+    parseJSON(stringJSON: string): any;
 }
 export { NekoBotRequest };
