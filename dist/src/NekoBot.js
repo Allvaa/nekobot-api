@@ -22,26 +22,30 @@ class NekoBot {
          * API Token (required for donator types in Image Endpoints)
          * @type {String}
          */
+        this.token;
         if (token)
             this.token = token;
     }
     /**
+     * Package version
      * @readonly
-     * @returns {String} Package version
+     * @returns {String}
      */
     get version() {
         return package_json_1.version;
     }
     /**
+     * ImageGeneration class
      * @readonly
-     * @returns {ImageGeneration} ImageGeneration class
+     * @returns {ImageGeneration}
      */
     get imageGen() {
         return new ImageGeneration_1.ImageGeneration(this);
     }
     /**
+     * ImageEndpoint class
      * @readonly
-     * @returns {ImageEndpoint} ImageEndpoint class
+     * @returns {ImageEndpoint}
      */
     get imageEndpoint() {
         return new ImageEndpoint_1.ImageEndpoint(this);

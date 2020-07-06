@@ -10,9 +10,10 @@ class NekoBotRequest {
     }
 
     get(endpoint: string, options: { query?: any, headers?: any }): Promise<NBRResponse> {
+        const urlq = [...Object.entries(options.query)].filter(x => Boolean(x[1])).map(x => `${x[0]}=${x[1]}`).join("&");
         const opt: https.RequestOptions = {
             hostname: this.client.baseURL.replace(/(^\w+:|^)\/\//, ""),
-            path: `/api/${endpoint}?${new URLSearchParams(options?.query).toString()}`,
+            path: `/api/${endpoint}?${urlq}`,
             method: "GET",
             headers: {
                 "content-type": "application/json",

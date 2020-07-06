@@ -10,18 +10,21 @@ declare class NekoBot {
     token?: string;
     constructor(token?: string);
     /**
+     * Package version
      * @readonly
-     * @returns {String} Package version
+     * @returns {String}
      */
     get version(): string;
     /**
+     * ImageGeneration class
      * @readonly
-     * @returns {ImageGeneration} ImageGeneration class
+     * @returns {ImageGeneration}
      */
     get imageGen(): ImageGeneration;
     /**
+     * ImageEndpoint class
      * @readonly
-     * @returns {ImageEndpoint} ImageEndpoint class
+     * @returns {ImageEndpoint}
      */
     get imageEndpoint(): ImageEndpoint;
     /**
