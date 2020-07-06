@@ -9,18 +9,18 @@ const donatorTypes = ["cosplay", "swimsuit"];
 /**
  * Creates an instance of NekoBot.
  * @class NekoBot
- * @param {String} [token]
+ * @param {string} [token]
  */
 class NekoBot {
     constructor(token) {
         /**
          * Base URL
-         * @type {String}
+         * @type {string}
          */
         this.baseURL = "https://nekobot.xyz";
         /**
          * API Token (required for donator types in Image Endpoints)
-         * @type {String}
+         * @type {string}
          */
         this.token;
         if (token)
@@ -29,7 +29,7 @@ class NekoBot {
     /**
      * Package version
      * @readonly
-     * @returns {String}
+     * @returns {string}
      */
     get version() {
         return package_json_1.version;
@@ -52,8 +52,9 @@ class NekoBot {
     }
     /**
      * Function to send requests to the API.
-     * @param {String} endpoint
+     * @param {string} endpoint
      * @param {*} query
+     * @returns {Promise<NBRResponse>}
      */
     request(endpoint, query) {
         const opt = {
@@ -69,6 +70,11 @@ class NekoBot {
                 .catch(reject);
         });
     }
+    /**
+     * @private
+     * @readonly
+     * @returns {NekoBotRequest}
+     */
     get _request() {
         return new NekoBotRequest_1.NekoBotRequest(this);
     }

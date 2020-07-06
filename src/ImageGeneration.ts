@@ -15,7 +15,7 @@ class ImageGeneration {
     /**
      * Threats Image
      * @param {string} url - Image URL to add to template.
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public threats(url: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -31,7 +31,7 @@ class ImageGeneration {
     /**
      * Baguette Image
      * @param {string} url - Any image URL to generate, can be user avatar or anything.
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public baguette(url: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -47,7 +47,7 @@ class ImageGeneration {
     /**
      * Clyde Image
      * @param {string} text - Text to clydify.
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public clyde(text: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -64,7 +64,7 @@ class ImageGeneration {
      * Ship Image
      * @param {string} user1 - User 1’s avatar
      * @param {string} user2 - User 2’s avatar
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public ship(user1: string, user2: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -82,7 +82,7 @@ class ImageGeneration {
      * Captcha Image
      * @param {string} url - User’s avatar URL or any image.
      * @param {string} username - User’s username or or any other string to show up.
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public captcha(url: string, username: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -100,7 +100,7 @@ class ImageGeneration {
      * WhoWouldWin Image
      * @param {string} user1 - User 1’s avatar
      * @param {string} user2 - User 2’s avatar
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public whoWouldWin(user1: string, user2: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -117,7 +117,7 @@ class ImageGeneration {
     /**
      * ChangeMyMind Image
      * @param {String} text - Change my mind text.
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public changeMyMind(text: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -137,7 +137,7 @@ class ImageGeneration {
      * @param {DDLCBodyType} body - Body of the character, there is only 1 or 2 for monika and 1, 1b, 2, 2b for the rest
      * @param {string} face - Face of the character to go with the body, is best to just see all the types at https://github.com/ReKTDevlol/NekoBot/blob/master/modules/fun.py#L14 (line14 to 34)
      * @param {string} text - Text for the character to say, max length of 140
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public ddlc(character: DDLCCharacterType, background: DDLCBackgroundType, body: DDLCBodyType, face: string, text: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -157,7 +157,7 @@ class ImageGeneration {
     /**
      * JPEG Image
      * @param {string} url - URL to JPEGify, would be recommended if the URL is as an JPEG or JPG format but PNG will still work :^)
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public jpeg(url: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -173,7 +173,7 @@ class ImageGeneration {
     /**
      * Lolice Image
      * @param {string} url - Lolice chief
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public lolice(url: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -189,7 +189,7 @@ class ImageGeneration {
     /**
      * Kannagen Image
      * @param {string} text - text to kannafy
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public kannagen(text: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -205,7 +205,7 @@ class ImageGeneration {
     /**
      * IPhoneX Image
      * @param {string} url - Image to fill into an iphone.
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public iphoneX(url: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -221,7 +221,7 @@ class ImageGeneration {
     /**
      * AnimeFace Image
      * @param {string} image - Image to find heccin weaboos
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public animeFace(image: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -237,7 +237,7 @@ class ImageGeneration {
     /**
      * Awooify Image
      * @param {string} url - Users avatar to AwOOOOify :3
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public awooify(url: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -273,7 +273,7 @@ class ImageGeneration {
     /**
      * TrumpTweet Image
      * @param {string} text - Text to TrumpTweet
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public trumpTweet(text: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -290,7 +290,7 @@ class ImageGeneration {
      * Tweet Image
      * @param {string} username - Twitter Username without the @
      * @param {string} text - Text to Tweet
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public tweet(username: string, text: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -307,7 +307,7 @@ class ImageGeneration {
     /**
      * DeepFry Image
      * @param {string} image - Image URL to DeepFry.
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public deepFry(image: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -323,7 +323,7 @@ class ImageGeneration {
     /**
      * Blurpify Image
      * @param {string} image - Image URL to Blurpify.
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public blurpify(image: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -341,7 +341,7 @@ class ImageGeneration {
      * @param {string} image - Users Image
      * @param {string} text - Text to comment.
      * @param {string} username - User's Username.
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public phComment(image: string, text: string, username: string): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -360,7 +360,7 @@ class ImageGeneration {
      * Magik Image
      * @param {string} image - Image to magikify
      * @param {number} [intensity] - an integer of magik intensity from 0 to 10
-     * @returns {(Promise<string>)} The image URL
+     * @returns {Promise<string>} The image URL
      */
     public magik(image: string, intensity?: number): Promise<string> {
         return new Promise((resolve, reject) => {
@@ -376,10 +376,10 @@ class ImageGeneration {
 
     /**
      * Fact Image
-     * @param {String} text - No description provided..
-     * @returns {(Promise<String | void>)} The image URL
+     * @param {string} text - No description provided..
+     * @returns {Promise<string>} The image URL
      */
-    public fact(text: string): Promise<string | void> {
+    public fact(text: string): Promise<string> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "fact",
@@ -392,10 +392,10 @@ class ImageGeneration {
 
     /**
      * Trash Image
-     * @param {String} url - URL of trash waifu
-     * @returns {(Promise<String | void>)} The image URL
+     * @param {string} url - URL of trash waifu
+     * @returns {Promise<string>} The image URL
      */
-    public trash(url: string): Promise<string | void> {
+    public trash(url: string): Promise<string> {
         return new Promise((resolve, reject) => {
             this.client.request("imagegen", {
                 type: "trash",

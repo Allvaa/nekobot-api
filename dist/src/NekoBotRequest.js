@@ -11,9 +11,10 @@ class NekoBotRequest {
         this.client = client;
     }
     get(endpoint, options) {
+        const urlq = [...Object.entries(options.query)].filter(x => Boolean(x[1])).map(x => `${x[0]}=${x[1]}`).join("&");
         const opt = {
             hostname: this.client.baseURL.replace(/(^\w+:|^)\/\//, ""),
-            path: `/api/${endpoint}?${new URLSearchParams(options === null || options === void 0 ? void 0 : options.query).toString()}`,
+            path: `/api/${endpoint}?${urlq}`,
             method: "GET",
             headers: Object.assign({ "content-type": "application/json", "user-agent": `${package_json_1.default.name}/${package_json_1.default.version} (${package_json_1.default.repository.url})` }, options === null || options === void 0 ? void 0 : options.headers)
         };

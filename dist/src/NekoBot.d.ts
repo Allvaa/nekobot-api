@@ -1,9 +1,10 @@
 import { ImageEndpoint } from "./ImageEndpoint";
 import { ImageGeneration } from "./ImageGeneration";
+import { NBRResponse } from "./Types";
 /**
  * Creates an instance of NekoBot.
  * @class NekoBot
- * @param {String} [token]
+ * @param {string} [token]
  */
 declare class NekoBot {
     baseURL: string;
@@ -12,7 +13,7 @@ declare class NekoBot {
     /**
      * Package version
      * @readonly
-     * @returns {String}
+     * @returns {string}
      */
     get version(): string;
     /**
@@ -29,10 +30,16 @@ declare class NekoBot {
     get imageEndpoint(): ImageEndpoint;
     /**
      * Function to send requests to the API.
-     * @param {String} endpoint
+     * @param {string} endpoint
      * @param {*} query
+     * @returns {Promise<NBRResponse>}
      */
-    request(endpoint: string, query: any): Promise<any>;
+    request(endpoint: string, query: any): Promise<NBRResponse>;
+    /**
+     * @private
+     * @readonly
+     * @returns {NekoBotRequest}
+     */
     private get _request();
 }
 export { NekoBot };
