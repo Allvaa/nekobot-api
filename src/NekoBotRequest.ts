@@ -26,8 +26,14 @@ class NekoBotRequest {
      * @param {*} options.headers
      * @returns {Promise<NBRResponse>}
      */
-    get(endpoint: string, options: { query?: any, headers?: any }): Promise<NBRResponse> {
-        const urlq = [...Object.entries(options.query)].filter(x => Boolean(x[1])).map(x => `${x[0]}=${x[1]}`).join("&");
+    get(
+        endpoint: string,
+        options: { query?: any; headers?: any }
+    ): Promise<NBRResponse> {
+        const urlq = [...Object.entries(options.query)]
+            .filter((x) => Boolean(x[1]))
+            .map((x) => `${x[0]}=${x[1]}`)
+            .join("&");
         const opt: https.RequestOptions = {
             hostname: this.client.baseURL.replace(/(^\w+:|^)\/\//, ""),
             path: `/api/${endpoint}?${urlq}`,
@@ -40,13 +46,14 @@ class NekoBotRequest {
         };
         return new Promise((resolve, reject) => {
             let raw: Buffer;
-            const req = https.request(opt, res => {
-                res
-                    .on("data", chunk => {
-                        raw = chunk;
-                    })
+            const req = https.request(opt, (res) => {
+                res.on("data", (chunk) => {
+                    raw = chunk;
+                })
                     .on("end", () => {
-                        if (!(res.statusCode! >= 200 && res.statusCode! < 300)) {
+                        if (
+                            !(res.statusCode! >= 200 && res.statusCode! < 300)
+                        ) {
                             reject(new Error(res.statusMessage));
                         } else {
                             resolve({

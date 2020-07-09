@@ -46,11 +46,7 @@ export type DDLCBackgroundType =
     | "residential"
     | "sayori_bedroom";
 
-export type DDLCBodyType =
-    | "1"
-    | "1b"
-    | "2"
-    | "2b";
+export type DDLCBodyType = "1" | "1b" | "2" | "2b";
 
 export interface NBRResponse {
     status: number;

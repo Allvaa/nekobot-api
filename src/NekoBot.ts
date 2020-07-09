@@ -69,13 +69,15 @@ class NekoBot {
             query,
             headers: {}
         };
-        if (endpoint === "image" && this.token && donatorTypes.includes(query.type)) {
+        if (
+            endpoint === "image" &&
+            this.token &&
+            donatorTypes.includes(query.type)
+        ) {
             opt.headers["Authorization"] = this.token; // eslint-disable-line
         }
         return new Promise((resolve, reject) => {
-            this._request.get(endpoint, opt)
-                .then(resolve)
-                .catch(reject);
+            this._request.get(endpoint, opt).then(resolve).catch(reject);
         });
     }
 

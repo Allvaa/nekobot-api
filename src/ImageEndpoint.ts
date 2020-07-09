@@ -22,10 +22,11 @@ class ImageEndpoint {
      */
     public getImage(type: ImageEndpointType): Promise<string> {
         return new Promise((resolve, reject) => {
-            this.client.request("image", {
-                type
-            })
-                .then(res => resolve(res.body.message))
+            this.client
+                .request("image", {
+                    type
+                })
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
