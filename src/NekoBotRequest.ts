@@ -2,6 +2,8 @@ import { NekoBot } from "./NekoBot";
 import https from "https";
 import pkg from "../package.json";
 import { NBRResponse } from "./Types";
+import { NekoBotError } from "./NekoBotError";
+import { STATUS_CODES } from "http";
 
 /**
  * Creates an instance of NekoBotRequest.
@@ -28,12 +30,13 @@ class NekoBotRequest {
      */
     get(
         endpoint: string,
-        options: { query?: any; headers?: any }
+        { query, headers }: { query?: any; headers?: any }
     ): Promise<NBRResponse> {
-        const urlq = [...Object.entries(options.query)]
+        const urlq = [...Object.entries(query)]
             .filter((x) => Boolean(x[1]))
             .map((x) => `${x[0]}=${x[1]}`)
             .join("&");
+
         const opt: https.RequestOptions = {
             hostname: this.client.baseURL.replace(/(^\w+:|^)\/\//, ""),
             path: `/api/${endpoint}?${urlq}`,
@@ -41,9 +44,10 @@ class NekoBotRequest {
             headers: {
                 "content-type": "application/json",
                 "user-agent": `${pkg.name}/${pkg.version} (${pkg.repository.url})`,
-                ...options?.headers
+                headers
             }
         };
+
         return new Promise((resolve, reject) => {
             let raw: Buffer;
             const req = https.request(opt, (res) => {
@@ -51,17 +55,26 @@ class NekoBotRequest {
                     raw = chunk;
                 })
                     .on("end", () => {
+                        const response = {
+                            status: res.statusCode!,
+                            headers: res.headers,
+                            raw,
+                            body: this.parseJSON(raw.toString()) || {}
+                        };
                         if (
                             !(res.statusCode! >= 200 && res.statusCode! < 300)
                         ) {
-                            reject(new Error(res.statusMessage));
+                            reject(
+                                new NekoBotError(
+                                    STATUS_CODES[res.statusCode!]!,
+                                    {
+                                        reason: response.body.message,
+                                        statusCode: res.statusCode!
+                                    }
+                                )
+                            );
                         } else {
-                            resolve({
-                                status: res.statusCode!,
-                                headers: res.headers,
-                                raw,
-                                body: this.parseJSON(raw.toString()) || {}
-                            });
+                            resolve(response);
                         }
                     })
                     .on("error", reject);

@@ -19,7 +19,7 @@ declare class NekoBotRequest {
      * @param {*} options.headers
      * @returns {Promise<NBRResponse>}
      */
-    get(endpoint: string, options: {
+    get(endpoint: string, { query, headers }: {
         query?: any;
         headers?: any;
     }): Promise<NBRResponse>;

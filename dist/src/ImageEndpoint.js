@@ -19,10 +19,11 @@ class ImageEndpoint {
      */
     getImage(type) {
         return new Promise((resolve, reject) => {
-            this.client.request("image", {
+            this.client
+                .request("image", {
                 type
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }

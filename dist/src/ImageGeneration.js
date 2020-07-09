@@ -20,11 +20,12 @@ class ImageGeneration {
      */
     threats(url) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "threats",
                 url
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -35,11 +36,12 @@ class ImageGeneration {
      */
     baguette(url) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "baguette",
                 url
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -50,11 +52,12 @@ class ImageGeneration {
      */
     clyde(text) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "clyde",
                 text
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -66,12 +69,13 @@ class ImageGeneration {
      */
     ship(user1, user2) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "ship",
                 user1,
                 user2
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -83,12 +87,13 @@ class ImageGeneration {
      */
     captcha(url, username) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "captcha",
                 url,
                 username
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -100,12 +105,13 @@ class ImageGeneration {
      */
     whoWouldWin(user1, user2) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "whowouldwin",
                 user1,
                 user2
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -116,11 +122,12 @@ class ImageGeneration {
      */
     changeMyMind(text) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "changemymind",
                 text
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -135,7 +142,8 @@ class ImageGeneration {
      */
     ddlc(character, background, body, face, text) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "ddlc",
                 character,
                 background,
@@ -143,7 +151,7 @@ class ImageGeneration {
                 face,
                 text
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -154,11 +162,12 @@ class ImageGeneration {
      */
     jpeg(url) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "jpeg",
                 url
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -169,11 +178,12 @@ class ImageGeneration {
      */
     lolice(url) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "lolice",
                 url
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -184,11 +194,12 @@ class ImageGeneration {
      */
     kannagen(text) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "kannagen",
                 text
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -199,11 +210,12 @@ class ImageGeneration {
      */
     iphoneX(url) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "iphonex",
                 url
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -214,11 +226,12 @@ class ImageGeneration {
      */
     animeFace(image) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "animeface",
                 image
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -229,11 +242,12 @@ class ImageGeneration {
      */
     awooify(url) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "awooify",
                 url
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -246,13 +260,14 @@ class ImageGeneration {
      */
     trap(name, author, image) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "trap",
                 name,
                 author,
                 image
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -263,11 +278,12 @@ class ImageGeneration {
      */
     trumpTweet(text) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "trumptweet",
                 text
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -279,12 +295,13 @@ class ImageGeneration {
      */
     tweet(username, text) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "tweet",
                 username,
                 text
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -295,11 +312,12 @@ class ImageGeneration {
      */
     deepFry(image) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "deepfry",
                 image
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -310,11 +328,12 @@ class ImageGeneration {
      */
     blurpify(image) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "blurpify",
                 image
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -327,13 +346,14 @@ class ImageGeneration {
      */
     phComment(image, text, username) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "phcomment",
                 image,
                 text,
                 username
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -345,12 +365,13 @@ class ImageGeneration {
      */
     magik(image, intensity) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "magik",
                 image,
                 intensity
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -361,11 +382,12 @@ class ImageGeneration {
      */
     fact(text) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "fact",
                 text
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }
@@ -376,11 +398,12 @@ class ImageGeneration {
      */
     trash(url) {
         return new Promise((resolve, reject) => {
-            this.client.request("imagegen", {
+            this.client
+                .request("imagegen", {
                 type: "trash",
                 url
             })
-                .then(res => resolve(res.body.message))
+                .then((res) => resolve(res.body.message))
                 .catch(reject);
         });
     }

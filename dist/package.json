@@ -8,7 +8,7 @@
         "test": "eslint --ignore-path .gitignore \"src/**/*.ts\" && npm run compile",
         "compile": "tsc -p .",
         "pretty": "prettier --write \"src/*\"",
-        "jsdoc": "jsdoc --configure .jsdoc.json"
+        "doc": "typedoc --ignoreCompilerErrors"
     },
     "repository": {
         "type": "git",
@@ -42,7 +42,7 @@
     },
     "dependencies": {},
     "prettier": {
-        "trailingComma": "es5",
+        "trailingComma": "none",
         "tabWidth": 4,
         "semi": true,
         "singleQuote": false
