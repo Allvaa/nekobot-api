@@ -44,7 +44,7 @@ class NekoBotRequest {
             headers: {
                 "content-type": "application/json",
                 "user-agent": `${pkg.name}/${pkg.version} (${pkg.repository.url})`,
-                headers
+                ...headers
             }
         };
 
