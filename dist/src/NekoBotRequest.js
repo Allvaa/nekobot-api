@@ -37,11 +37,7 @@ class NekoBotRequest {
             hostname: this.client.baseURL.replace(/(^\w+:|^)\/\//, ""),
             path: `/api/${endpoint}?${urlq}`,
             method: "GET",
-            headers: {
-                "content-type": "application/json",
-                "user-agent": `${package_json_1.default.name}/${package_json_1.default.version} (${package_json_1.default.repository.url})`,
-                headers
-            }
+            headers: Object.assign({ "content-type": "application/json", "user-agent": `${package_json_1.default.name}/${package_json_1.default.version} (${package_json_1.default.repository.url})` }, headers)
         };
         return new Promise((resolve, reject) => {
             let raw;
