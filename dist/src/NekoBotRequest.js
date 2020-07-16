@@ -31,7 +31,7 @@ class NekoBotRequest {
     get(endpoint, { query, headers }) {
         const urlq = [...Object.entries(query)]
             .filter((x) => Boolean(x[1]))
-            .map((x) => `${x[0]}=${x[1]}`)
+            .map((x) => `${x[0]}=${encodeURIComponent(x[1])}`)
             .join("&");
         const opt = {
             hostname: this.client.baseURL.replace(/(^\w+:|^)\/\//, ""),

@@ -34,7 +34,7 @@ class NekoBotRequest {
     ): Promise<NBRResponse> {
         const urlq = [...Object.entries(query)]
             .filter((x) => Boolean(x[1]))
-            .map((x) => `${x[0]}=${x[1]}`)
+            .map((x) => `${x[0]}=${encodeURIComponent(x[1] as string)}`)
             .join("&");
 
         const opt: https.RequestOptions = {
