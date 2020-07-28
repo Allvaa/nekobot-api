@@ -3,7 +3,7 @@ import { ImageEndpoint } from "./ImageEndpoint";
 import { ImageGeneration } from "./ImageGeneration";
 import { NekoBotRequest } from "./NekoBotRequest";
 import { NBRResponse } from "./Types";
-const donatorTypes = ["cosplay", "swimsuit"];
+const donatorTypes = ["cosplay", "swimsuit", "pantsu"];
 
 /**
  * Creates an instance of NekoBot.
