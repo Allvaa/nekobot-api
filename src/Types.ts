@@ -23,7 +23,8 @@ export type ImageEndpointType =
     | "cosplay"
     | "paizuri"
     | "tentacle"
-    | "swimsuit";
+    | "swimsuit"
+    | "pantsu";
 
 export type DDLCCharacterType =
     | "monika"
