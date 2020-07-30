@@ -5,7 +5,7 @@ const package_json_1 = require("../package.json");
 const ImageEndpoint_1 = require("./ImageEndpoint");
 const ImageGeneration_1 = require("./ImageGeneration");
 const NekoBotRequest_1 = require("./NekoBotRequest");
-const donatorTypes = ["cosplay", "swimsuit"];
+const donatorTypes = ["cosplay", "swimsuit", "pantsu"];
 /**
  * Creates an instance of NekoBot.
  * @class NekoBot
