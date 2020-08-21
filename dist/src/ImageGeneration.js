@@ -407,6 +407,22 @@ class ImageGeneration {
                 .catch(reject);
         });
     }
+    /**
+     * Stickbug Image
+     * @param {string} url - Image url for stickbug
+     * @returns {Promise<string>} The image URL
+     */
+    stickbug(url) {
+        return new Promise((resolve, reject) => {
+            this.client
+                .request("imagegen", {
+                type: "stickbug",
+                url
+            })
+                .then((res) => resolve(res.body.message))
+                .catch(reject);
+        });
+    }
 }
 exports.ImageGeneration = ImageGeneration;
 //# sourceMappingURL=ImageGeneration.js.map

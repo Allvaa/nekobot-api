@@ -162,5 +162,11 @@ declare class ImageGeneration {
      * @returns {Promise<string>} The image URL
      */
     trash(url: string): Promise<string>;
+    /**
+     * Stickbug Image
+     * @param {string} url - Image url for stickbug
+     * @returns {Promise<string>} The image URL
+     */
+    stickbug(url: string): Promise<string>;
 }
 export { ImageGeneration };
