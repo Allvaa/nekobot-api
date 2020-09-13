@@ -24,7 +24,9 @@ export type ImageEndpointType =
     | "paizuri"
     | "tentacle"
     | "swimsuit"
-    | "pantsu";
+    | "pantsu"
+    | "boobs"
+    | "hboobs";
 
 export type DDLCCharacterType =
     | "monika"
