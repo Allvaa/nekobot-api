@@ -1,4 +1,4 @@
-import { DDLCBackgroundList, DDLCBodyList, DDLCCharacterList } from "../typings";
+import { DDLCBackgroundList, DDLCBodyList, DDLCCharacterList, DonatorImageType, ImageType } from "../typings";
 import Request from "../utils/Request";
 
 export default interface NekoBot {
@@ -42,6 +42,17 @@ export default class NekoBot {
         return new Promise((resolve, reject) => {
             this.request
                 .get("imagegen", { queries: { ...queries, type } })
+                .then(resolve)
+                .catch(reject);
+        });
+    }
+
+    public get(type: ImageType | DonatorImageType): Promise<string> {
+        const headers: Record<string, string> = {};
+        if (this.token) headers["Authorization"] = this.token;
+        return new Promise((resolve, reject) => {
+            this.request
+                .get("image", { queries: { type }, headers })
                 .then(resolve)
                 .catch(reject);
         });
