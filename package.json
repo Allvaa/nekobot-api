@@ -1,0 +1,38 @@
+{
+  "name": "nekobot-api",
+  "version": "2.0.0",
+  "description": "NekoBot API wrapper for Node.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint --ignore-path .gitignore \"**/*.ts\"",
+    "lint:fix": "yarn lint --fix",
+    "test": "yarn lint && yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Allvaa/nekobot-api.git"
+  },
+  "keywords": [
+    "api",
+    "neko",
+    "nekobot",
+    "nsfw",
+    "images",
+    "anime",
+    "discord"
+  ],
+  "author": "Allvaa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Allvaa/nekobot-api/issues"
+  },
+  "homepage": "https://github.com/Allvaa/nekobot-api#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "eslint": "^7.11.0",
+    "typescript": "^4.0.3"
+  }
+}
