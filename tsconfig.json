@@ -8,10 +8,13 @@
     "strict": true,
     "noImplicitAny": true,
     "alwaysStrict": true,
-    "typeRoots": [],
-    "types": [],
+    "typeRoots": [
+      "node_modules/@types",
+      "src/typings"
+    ],
     "esModuleInterop": true,
     "inlineSourceMap": true,
     "skipLibCheck": true,
+    "resolveJsonModule": true
   }
 }
