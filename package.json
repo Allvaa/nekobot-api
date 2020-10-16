@@ -8,7 +8,8 @@
     "build": "tsc",
     "lint": "eslint --ignore-path .gitignore \"**/*.ts\"",
     "lint:fix": "yarn lint --fix",
-    "test": "yarn lint && yarn build"
+    "test": "yarn lint && yarn build",
+    "docs": "typedoc"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "@typescript-eslint/eslint-plugin": "^4.4.1",
     "@typescript-eslint/parser": "^4.4.1",
     "eslint": "^7.11.0",
+    "typedoc": "^0.19.2",
     "typescript": "^4.0.3"
   }
 }
