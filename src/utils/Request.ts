@@ -22,7 +22,6 @@ export default class Request {
                 `${this.client.baseURL}/${endpoint}?${this.encodeSearchParams(queries)}`, {
                     method,
                     headers: {
-                        "Content-Type": "application/json",
                         "User-Agent": `${pkg.name}/${pkg.version} (${pkg.repository.url})`,
                         ...headers
                     }
