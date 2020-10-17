@@ -15,6 +15,7 @@
     "esModuleInterop": true,
     "inlineSourceMap": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "removeComments": true
   }
 }
