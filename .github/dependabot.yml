@@ -1,0 +1,14 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  target-branch: master
+  reviewers:
+  - Allvaa
+  labels:
+  - dependencies
+  commit-message:
+    prefix: chore
+    include: scope
