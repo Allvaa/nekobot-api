@@ -2,9 +2,6 @@ import NekoBot from "../classes/NekoBot";
 import NekoBotError from "./Error";
 import { request } from "https";
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const pkg: { name: string; version: string; repository: { url: string } }= require("../../package.json");
-
 export default class Request {
     public constructor(public readonly client: NekoBot) {}
 
@@ -18,13 +15,15 @@ export default class Request {
     }
 
     private _send(method: string, endpoint: string, { queries, headers = {} }: { queries: Record<string, string>; headers?: Record<string, string> }): Promise<{ statusCode: number; body: any }> {
+        // eslint-disable-next-line @typescript-eslint/no-var-requires
+        const pkg: { name: string; version: string; repository: { url: string } } = require("../../package.json");
         return new Promise((resolve, reject) => {
             const req = request(
                 `${this.client.baseURL}/${endpoint}?${this.encodeSearchParams(queries)}`, {
                     method,
                     headers: {
-                        "content-type": "application/json",
-                        "user-agent": `${pkg.name}/${pkg.version} (${pkg.repository.url})`,
+                        "Content-Type": "application/json",
+                        "User-Agent": `${pkg.name}/${pkg.version} (${pkg.repository.url})`,
                         ...headers
                     }
                 }, response => {
