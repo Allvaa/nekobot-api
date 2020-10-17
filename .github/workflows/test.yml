@@ -1,0 +1,26 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [12.x, 13.x, 14.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Installing Node.js v${{ matrix.node }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Installing dependencies
+        run: yarn install --frozen-lockfile
+      - name: Running linter and compile
+        run: yarn test
