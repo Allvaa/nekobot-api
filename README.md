@@ -1,8 +1,7 @@
-# nekobot-api [![CircleCI](https://circleci.com/gh/Allvaa/nekobot-api.svg?style=svg)](https://circleci.com/gh/Allvaa/nekobot-api) [![Depedencies](https://img.shields.io/david/Allvaa/nekobot-api.svg)](https://david-dm.org/Allvaa/nekobot-api)
-[NekoBot](https://nekobot.xyz/) API wrapper for Node.js
+# nekobot-api ![npm](https://img.shields.io/npm/v/nekobot-api)
+[NekoBot API](https://docs.nekobot.xyz/ "NekoBot API") wrapper for Node.js
 
 ## Installing
-[![Version](https://nodei.co/npm/nekobot-api.png?compact=true)](https://nodei.co/npm/nekobot-api)
 ```sh
 # npm
 npm i nekobot-api
@@ -14,12 +13,18 @@ yarn add nekobot-api
 ## Example Usage
 ```js
 const { NekoBot } = require("nekobot-api");
-const api = new NekoBot("token"); // token are only needed for donator types in Image Endpoint. so you can leave it empty.
+const api = new NekoBot();
 
-async function run() {
-    let image = await api.imageGen.magik("image url"); // returns a string.
+// imagegen endpoint
+(async () => {
+    const image = await api.generate("magik", { image: "image url" });
     console.log(image);
-}
-run();
+})();
+
+// image endpoint
+(async () => {
+    const image = await api.get("food");
+    console.log(image);
+})();
 ```
-[Documentation](https://nba.allvzx.website)
+[Documentation](https://allvaa.github.io/nekobot-api)

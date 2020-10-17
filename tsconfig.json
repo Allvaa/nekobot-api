@@ -1,26 +1,21 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "ES6",
     "module": "commonjs",
     "declaration": true,
-    "sourceMap": true,
-    "outDir": "./dist/",
+    "outDir": "dist",
+    "rootDir": "src",
     "strict": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "sourceRoot": "./src",
+    "noImplicitAny": true,
+    "alwaysStrict": true,
     "typeRoots": [
-      "./node_modules/@types"
-    ]
-  },
-  "exclude": [
-    "./dist/*",
-    "./node_modules/*"
-  ],
-  "typedocOptions": {
-		"out": "./docs",
-		"readme": "./README.md",
-		"name": "nekobot-api",
-		"mode": "file",
- }
+      "node_modules/@types",
+      "src/typings"
+    ],
+    "esModuleInterop": true,
+    "inlineSourceMap": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "removeComments": true
+  }
 }
