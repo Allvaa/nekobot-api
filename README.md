@@ -1,4 +1,4 @@
-# nekobot-api ![npm](https://img.shields.io/npm/v/nekobot-api)
+# nekobot-api [![npm](https://img.shields.io/npm/v/nekobot-api)](https://npmjs.com/package/nekobot-api "nekobot-api")
 [NekoBot API](https://docs.nekobot.xyz/ "NekoBot API") wrapper for Node.js
 
 ## Installing
@@ -27,4 +27,4 @@ const api = new NekoBot();
     console.log(image);
 })();
 ```
-[Documentation](https://allvaa.github.io/nekobot-api)
+[Documentation](https://allvaa.github.io/nekobot-api "Documentaion")

@@ -4,6 +4,7 @@
   "description": "NekoBot API wrapper for Node.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": ["dist/**/*"],
   "scripts": {
     "build": "tsc",
     "lint": "eslint --ignore-path .gitignore \"**/*.ts\"",
