@@ -1,10 +1,12 @@
 {
   "name": "nekobot-api",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "NekoBot API wrapper for Node.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist/**/*"],
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
     "build": "tsc",
     "lint": "eslint --ignore-path .gitignore \"**/*.ts\"",
