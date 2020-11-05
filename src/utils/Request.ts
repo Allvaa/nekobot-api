@@ -37,7 +37,7 @@ export default class Request {
                                 body: JSON.parse(raw)
                             };
                             if (!(res.statusCode >= 200 && res.statusCode < 300)) {
-                                reject(new NekoBotError(res.statusCode, res.body.message));
+                                reject(new NekoBotError(res.body.message, res.statusCode));
                             } else {
                                 resolve(res);
                             }
