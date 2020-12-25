@@ -5,8 +5,6 @@ updates:
   schedule:
     interval: daily
   target-branch: master
-  reviewers:
-  - Allvaa
   labels:
   - dependencies
   commit-message:
