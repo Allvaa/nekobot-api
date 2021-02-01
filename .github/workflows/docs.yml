@@ -1,0 +1,33 @@
+name: Generate docs
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Installing Node.js v12
+        uses: actions/setup-node@v2
+        with:
+          node-version: "12"
+      - name: Installing dependencies
+        run: yarn install --frozen-lockfile
+      - name: Generating docs
+        run: yarn docs
+      - name: Force add docs
+        run: git add docs -f
+      - name: Configuring user
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      - name: Commit and push
+        run: |
+          git commit -m "docs: from ${GITHUB_SHA}" || true
+          git push origin ${GITHUB_REF}
