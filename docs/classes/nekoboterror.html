@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>NekoBotError | nekobot-api - v2.0.0</title>
-	<meta name="description" content="Documentation for nekobot-api - v2.0.0">
+	<title>NekoBotError | nekobot-api - v2.0.1</title>
+	<meta name="description" content="Documentation for nekobot-api - v2.0.1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">nekobot-api - v2.0.0</a>
+					<a href="../index.html" class="title">nekobot-api - v2.0.1</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -94,8 +94,8 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="nekoboterror.html#message" class="tsd-kind-icon">message</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="nekoboterror.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="nekoboterror.html#reason" class="tsd-kind-icon">reason</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="nekoboterror.html#stack" class="tsd-kind-icon">stack</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="nekoboterror.html#status" class="tsd-kind-icon">status</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="nekoboterror.html#statuscode" class="tsd-kind-icon">status<wbr>Code</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="nekoboterror.html#error" class="tsd-kind-icon">Error</a></li>
 							</ul>
@@ -109,22 +109,22 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Neko<wbr>Bot<wbr>Error<span class="tsd-signature-symbol">(</span>statusCode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, reason<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="nekoboterror.html" class="tsd-signature-type">NekoBotError</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Neko<wbr>Bot<wbr>Error<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, statusCode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="nekoboterror.html" class="tsd-signature-type">NekoBotError</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Allvaa/nekobot-api/blob/848ae41/src/utils/Error.ts#L3">src/utils/Error.ts:3</a></li>
+									<li>Defined in <a href="https://github.com/Allvaa/nekobot-api/blob/051e8ad/src/utils/Error.ts#L4">src/utils/Error.ts:4</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>statusCode: <span class="tsd-signature-type">number</span></h5>
+									<h5>message: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>reason: <span class="tsd-signature-type">string</span></h5>
+									<h5>statusCode: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="nekoboterror.html" class="tsd-signature-type">NekoBotError</a></h4>
@@ -156,16 +156,6 @@
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="reason" class="tsd-anchor"></a>
-					<h3>reason</h3>
-					<div class="tsd-signature tsd-kind-icon">reason<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/Allvaa/nekobot-api/blob/848ae41/src/utils/Error.ts#L4">src/utils/Error.ts:4</a></li>
-						</ul>
-					</aside>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="stack" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> stack</h3>
@@ -178,12 +168,22 @@
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="status" class="tsd-anchor"></a>
+					<h3>status</h3>
+					<div class="tsd-signature tsd-kind-icon">status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Allvaa/nekobot-api/blob/051e8ad/src/utils/Error.ts#L4">src/utils/Error.ts:4</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="statuscode" class="tsd-anchor"></a>
 					<h3>status<wbr>Code</h3>
 					<div class="tsd-signature tsd-kind-icon">status<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Allvaa/nekobot-api/blob/848ae41/src/utils/Error.ts#L4">src/utils/Error.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/Allvaa/nekobot-api/blob/051e8ad/src/utils/Error.ts#L5">src/utils/Error.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -226,11 +226,11 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="nekoboterror.html#name" class="tsd-kind-icon">name</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="nekoboterror.html#reason" class="tsd-kind-icon">reason</a>
-							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="nekoboterror.html#stack" class="tsd-kind-icon">stack</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="nekoboterror.html#status" class="tsd-kind-icon">status</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="nekoboterror.html#statuscode" class="tsd-kind-icon">status<wbr>Code</a>
