@@ -17,10 +17,32 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Installing Node.js v${{ matrix.node }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
       - name: Installing dependencies
         run: yarn install --frozen-lockfile
       - name: Running linter and compile
         run: yarn test
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Installing Node.js v12
+        uses: actions/setup-node@v2
+        with:
+          node-version: "12"
+      - name: Installing dependencies
+        run: yarn install --frozen-lockfile
+      - name: Running linter and compile
+        run: yarn test
+      - name: Force add dist
+        run: git add dist -f
+      - name: Configuring user
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      - name: Commit and push
+        run: |
+          git commit -m "chore(build): from ${GITHUB_SHA}" || true
+          git push origin ${GITHUB_REF}
