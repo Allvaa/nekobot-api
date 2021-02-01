@@ -32,6 +32,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "12"
+      - run: |
+          git fetch origin ${GITHUB_REF}
+          git pull origin ${GITHUB_REF}
       - name: Installing dependencies
         run: yarn install --frozen-lockfile
       - name: Running linter and compile
