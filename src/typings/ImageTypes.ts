@@ -23,9 +23,11 @@ export type ImageType =
     | "paizuri"
     | "tentacle"
     | "boobs"
-    | "hboobs";
+    | "hboobs"
+    | "yaoi";
 
 export type DonatorImageType =
     | "cosplay"
     | "swimsuit"
-    | "pantsu";
+    | "pantsu"
+    | "nakadashi";
