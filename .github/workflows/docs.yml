@@ -14,6 +14,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "12"
+      - run: |
+          git fetch origin master
+          git checkout master
       - name: Installing dependencies
         run: yarn install --frozen-lockfile
       - name: Generating docs
