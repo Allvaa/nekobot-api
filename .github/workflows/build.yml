@@ -45,4 +45,4 @@ jobs:
       - name: Commit and push
         run: |
           git commit -m "chore(build): from ${GITHUB_SHA}" || true
-          git push origin ${GITHUB_REF}
+          git push origin ${GITHUB_REF} || true
