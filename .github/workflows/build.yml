@@ -3,7 +3,7 @@ name: Build and Push
 on:
   push:
     branches:
-      - master
+      - "**"
 
 jobs:
   build:
@@ -22,6 +22,7 @@ jobs:
       - name: Running linter and compile
         run: yarn test
   push:
+    if: GITHUB_EVENT_NAME == "push" && GITHUB_REF == "refs/heads/master"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
