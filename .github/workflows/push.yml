@@ -1,0 +1,34 @@
+name: Push compiled files
+
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  push:
+    if: ${{ github.event_name == 'push' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Installing Node.js v12
+        uses: actions/setup-node@v2
+        with:
+          node-version: "12"
+      - name: Installing dependencies
+        run: yarn install --frozen-lockfile
+      - name: Running linter and compile
+        run: yarn test
+      - run: |
+          git fetch origin ${GITHUB_REF}
+          git pull origin ${GITHUB_REF}
+      - name: Force add dist
+        run: git add dist -f
+      - name: Configuring user
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+      - name: Commit and push
+        run: |
+          git commit -m "chore(build): from ${{ github.sha }}" || true
+          git push origin ${{ github.ref }}
