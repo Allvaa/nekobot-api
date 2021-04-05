@@ -30,4 +30,4 @@ jobs:
       - name: Commit and push
         run: |
           git commit -m "chore(build): from ${{ github.sha }}" || true
-          git push origin ${{ github.ref }}
+          git push origin ${{ github.ref }} || true
